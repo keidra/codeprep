@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rating/create'
+
   get 'comments/create'
 
   get 'comments/destroy'
