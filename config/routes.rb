@@ -1,31 +1,31 @@
 Rails.application.routes.draw do
-  get 'rating/create'
+  post 'rating/create' => 'rating#create'
 
-  get 'comments/create'
+  post 'comments/create' => 'comments#create'
 
-  get 'comments/destroy'
+  delete 'comments/destroy' => 'comments#destroy'
 
-  get 'solutions/index'
+  get 'solutions/index' => 'solutions#index'
 
-  get 'solutions/new'
+  get 'solutions/new' => 'solutions#new'
 
-  get 'solutions/destroy'
+  delete 'solutions/destroy' => 'solutions#destroy'
 
-  get 'solutions/create'
+  post 'solutions/create' => 'solutions#create'
 
-  get 'solutions/show'
+  get 'solutions/:id' => 'solutions#show'
 
-  get 'questions/show'
+  get 'questions/:id' => 'questions#show'
 
-  get 'sessions/create'
+  post 'sessions/create' => 'sessions#create'
 
-  get 'sessions/destroy'
+  get 'sessions/destroy' => 'sessions#destroy'
 
-  get 'users/create'
+  post 'users/create' => 'users#create'
 
-  get 'users/update'
+  put 'users/update' => 'users#update'
 
-  get 'users/edit'
+  get 'users/edit' => 'users#update'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
