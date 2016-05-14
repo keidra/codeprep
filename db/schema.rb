@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513231740) do
+ActiveRecord::Schema.define(version: 20160513233838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,9 +29,23 @@ ActiveRecord::Schema.define(version: 20160513231740) do
 
   create_table "questions", force: :cascade do |t|
     t.string   "content"
+    t.integer  "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "questions", ["tag_id"], name: "index_questions_on_tag_id", using: :btree
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "value"
+    t.integer  "user_id"
+    t.integer  "solution_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "ratings", ["solution_id"], name: "index_ratings_on_solution_id", using: :btree
+  add_index "ratings", ["user_id"], name: "index_ratings_on_user_id", using: :btree
 
   create_table "solutions", force: :cascade do |t|
     t.integer  "user_id"
@@ -43,6 +57,12 @@ ActiveRecord::Schema.define(version: 20160513231740) do
   add_index "solutions", ["question_id"], name: "index_solutions_on_question_id", using: :btree
   add_index "solutions", ["user_id"], name: "index_solutions_on_user_id", using: :btree
 
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -53,6 +73,9 @@ ActiveRecord::Schema.define(version: 20160513231740) do
 
   add_foreign_key "comments", "questions"
   add_foreign_key "comments", "users"
+  add_foreign_key "questions", "tags"
+  add_foreign_key "ratings", "solutions"
+  add_foreign_key "ratings", "users"
   add_foreign_key "solutions", "questions"
   add_foreign_key "solutions", "users"
 end
