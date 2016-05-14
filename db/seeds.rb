@@ -7,16 +7,16 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # create user
-StanDaMan = User.create([
+StanDaMan = User.find_or_create([
 	{name: 'StanDaMan', email: 'standaman@mail.com', password: 'Password123'}
 	])
 
 # create tags
-easyTag = Tag.create({name: 'easy'})
-middleTag = Tag.create({name: 'middle'})
+easyTag = Tag.find_or_create({name: 'easy'})
+middleTag = Tag.find_or_create({name: 'middle'})
 
 # create questions
-acronym_q = Question.create(
+acronym_q = Question.find_or_create(
 	{content: "Write a function named 'acronym' that takes a string and returns an acronym."
 	+ "\n    acronym('Syntactically awesome style sheets'); // returns 'SASS'"
 	+ "\n    acronym('Washinton State Department of Transportation') // returns 'WSDOT'"
@@ -35,12 +35,15 @@ factors_q =	{content: "Write a function named factors that takes an integer and 
 	+ "\n    factors(0); // returns [0]"}
 
 # associate tags with questions
-acronym.tags << easyTag
-factorial.tags << easyTag
-factors.tags << middleTag
+unless acronym.tags.exists?({name: 'easy'})
+	acronym.tags << easyTag
+unless factorial.tags.exists?({name: 'easy'})
+	factorial.tags << easyTag
+unless factors.tags.exists?({name: 'middle'})
+	factors.tags << middleTag
 
 # answer a question
-factors_a = Solution.create({user_id: StanDaMan.id, question_id: factors_q.id, content:
+factors_a = Solution.find_or_create({user_id: StanDaMan.id, question_id: factors_q.id, content:
 	+ "function factors(x){"
 	+ "\n  var factorArr = [];"
 	+ "\n  var limit = Math.sqrt(x);"
@@ -48,7 +51,7 @@ factors_a = Solution.create({user_id: StanDaMan.id, question_id: factors_q.id, c
 	+ "\n    if (x % i === 0){"
 	+ "\n      factorArr.push(i);"
 	+ "\n      if(i != x / i){"
-	+ "\n        actorArr.push(x / i);"
+	+ "\n        factorArr.push(x / i);"
 	+ "\n        }"
 	+ "\n      }"
 	+ "\n    }"
