@@ -7,15 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # create user
-stanDaMan = User.find_or_create_by({
+stanDaMan = User.new({
 	name: 'StanDaMan',
 	email: 'standaman@mail.com',
-	password_digest: 'Password123'})
+	password: 'Password123'})
+
+if stanDaMan.valid?
+	stanDaMan.save
+end
 
 # create tags
 easyTag = Tag.find_or_create_by({name: 'easy'})
 mediumTag = Tag.find_or_create_by({name: 'middle'})
-hardTag= Tag.find_or_create_by({name: 'hard'})
+hardTag = Tag.find_or_create_by({name: 'hard'})
 
 # create questions
 
@@ -76,11 +80,11 @@ end
 unless fibonacci_m.tags.exists?({name: 'medium'})
 	fibonacci_m.tags << mediumTag
 end
-unless non_repeat.tag.exists?({name: 'easy'})
-	non_repeat.tags <<easyTag
+unless non_repeat.tags.exists?({name: 'easy'})
+	non_repeat.tags << easyTag
 end
-unless integer_length.tag.exists?({name: 'easy'})
-	integer_length.tags <<easyTag
+unless integer_length.tags.exists?({name: 'easy'})
+	integer_length.tags << easyTag
 end
 
 
