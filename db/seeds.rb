@@ -55,6 +55,11 @@ non_repeat = Question.find_or_create_by(
 	"\n      'AABBCCDEEFF' returns D"
 	})
 
+integer_length = Question.find_or_create_by(
+{content: "Write a function that takes an integer as input and returns the number of digits in that integer" +
+	"\n     'apple' returns 5"
+	})
+
 
 
 
@@ -71,8 +76,11 @@ end
 unless fibonacci_m.tags.exists?({name: 'medium'})
 	fibonacci_m.tags << mediumTag
 end
-unless non_repeat.tag.exits?({name: 'easy'})
+unless non_repeat.tag.exists?({name: 'easy'})
 	non_repeat.tags <<easyTag
+end
+unless integer_length.tag.exists?({name: 'easy'})
+	integer_length.tags <<easyTag
 end
 
 
