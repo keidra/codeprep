@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def show
   	@question = Question.find params[:id]
-  	render :json => @creature
+  	render :json => @question
   end
 end
