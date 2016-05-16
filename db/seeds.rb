@@ -17,6 +17,12 @@ easyTag = Tag.find_or_create_by({name: 'easy'})
 middleTag = Tag.find_or_create_by({name: 'middle'})
 
 # create questions
+factors_q = Question.find_or_create_by(
+	{content: "By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two." +
+		"\n    The first ten Fibonacci numbers are:" +
+		"\n    0, 1, 1, 2, 3, 5, 8, 13, 21, 34"
+	})
+
 acronym_q = Question.find_or_create_by(
 	{content: "Write a function named 'acronym' that takes a string and returns an acronym." + 
 		"\n    acronym('Syntactically awesome style sheets'); // returns 'SASS'" +
@@ -50,6 +56,11 @@ end
 unless factors_q.tags.exists?({name: 'middle'})
 	factors_q.tags << middleTag
 end
+unless acronym_h.tags.exists?({name: 'hard'})
+	acronym_h.tags << hardTag
+end
+
+
 
 # answer a question
 factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: factors_q.id,
