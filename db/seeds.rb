@@ -18,11 +18,7 @@ mediumTag = Tag.find_or_create_by({name: 'middle'})
 hardTag= Tag.find_or_create_by({name: 'hard'})
 
 # create questions
-fibonacci_m = Question.find_or_create_by(
-	{content: "By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two." +
-		"\n    The first ten Fibonacci numbers are:" +
-		"\n    0, 1, 1, 2, 3, 5, 8, 13, 21, 34"
-	})
+
 
 acronym_q = Question.find_or_create_by(
 	{content: "Write a function named 'acronym' that takes a string and returns an acronym." + 
@@ -30,7 +26,6 @@ acronym_q = Question.find_or_create_by(
 		"\n    acronym('Washinton State Department of Transportation') // returns 'WSDOT'" +
 		"\n    acronym(\"GNU's not Unix\") // returns 'GNU'"
 	})
-
 
 factorial_q =	Question.find_or_create_by(
 	{content: "Write a function named 'factorial' that takes an integer and returns the factorial of that number." +
@@ -47,6 +42,22 @@ factors_q =	Question.find_or_create_by(
 		"\n    factors(0); // returns [0]"
 	})
 
+fibonacci_m = Question.find_or_create_by(
+	{content: "By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two." +
+		"\n    The first ten Fibonacci numbers are:" +
+		"\n    0, 1, 1, 2, 3, 5, 8, 13, 21, 34" +
+		"\n    Write a function that accepts a number and returns the number at that position in the fionnaci sequence."
+	})
+
+non_repeat = Question.find_or_create_by(
+{content: "Write a function that accepts a single string input and returns the first non-repeatd character" +
+	"\n      "AABBC" returns C" +
+	"\n      "AABBCCDEEFF" returns D"
+	})
+
+
+
+
 # associate tags with questions
 unless acronym_q.tags.exists?({name: 'easy'})
 	acronym_q.tags << easyTag
@@ -59,6 +70,9 @@ unless factors_q.tags.exists?({name: 'medium'})
 end
 unless fibonacci_m.tags.exists?({name: 'medium'})
 	fibonacci_m.tags << mediumTag
+end
+unless non_repeat.tag.exits?({name: 'easy'})
+	non_repeat.tags <<easyTag
 end
 
 
