@@ -51,8 +51,8 @@ fibonacci_m = Question.find_or_create_by(
 
 non_repeat = Question.find_or_create_by(
 {content: "Write a function that accepts a single string input and returns the first non-repeatd character" +
-	"\n      "AABBC" returns C" +
-	"\n      "AABBCCDEEFF" returns D"
+	"\n      'AABBC' returns C" +
+	"\n      'AABBCCDEEFF' returns D"
 	})
 
 
