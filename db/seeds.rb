@@ -14,7 +14,8 @@ stanDaMan = User.find_or_create_by({
 
 # create tags
 easyTag = Tag.find_or_create_by({name: 'easy'})
-middleTag = Tag.find_or_create_by({name: 'middle'})
+mediumTag = Tag.find_or_create_by({name: 'middle'})
+hardTag= Tag.find_or_create_by({name: 'hard'})
 
 # create questions
 fibonacci_m = Question.find_or_create_by(
@@ -56,7 +57,7 @@ end
 unless factors_q.tags.exists?({name: 'medium'})
 	factors_q.tags << mediumTag
 end
-unless fibonacci_m.tags.exists?({name: 'hard'})
+unless fibonacci_m.tags.exists?({name: 'medium'})
 	fibonacci_m.tags << mediumTag
 end
 
