@@ -101,7 +101,7 @@ unless integer_length.tags.exists?({name: 'easy'})
 	integer_length.tags << easyTag
 end
 unless largest_palindrome.tags.exists?({name: 'easy'})
-	largest_palindrome.tags <<hardTag
+	largest_palindrome.tags << hardTag
 end
 
 
