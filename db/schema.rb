@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513233838) do
+ActiveRecord::Schema.define(version: 20160514235004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(version: 20160513233838) do
 
   add_index "questions", ["tag_id"], name: "index_questions_on_tag_id", using: :btree
 
+  create_table "questions_tags", force: :cascade do |t|
+    t.integer  "question_id"
+    t.integer  "tag_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "questions_tags", ["question_id"], name: "index_questions_tags_on_question_id", using: :btree
+  add_index "questions_tags", ["tag_id"], name: "index_questions_tags_on_tag_id", using: :btree
+
   create_table "ratings", force: :cascade do |t|
     t.integer  "value"
     t.integer  "user_id"
@@ -48,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160513233838) do
   add_index "ratings", ["user_id"], name: "index_ratings_on_user_id", using: :btree
 
   create_table "solutions", force: :cascade do |t|
+    t.string   "content"
     t.integer  "user_id"
     t.integer  "question_id"
     t.datetime "created_at",  null: false
@@ -74,6 +85,8 @@ ActiveRecord::Schema.define(version: 20160513233838) do
   add_foreign_key "comments", "questions"
   add_foreign_key "comments", "users"
   add_foreign_key "questions", "tags"
+  add_foreign_key "questions_tags", "questions"
+  add_foreign_key "questions_tags", "tags"
   add_foreign_key "ratings", "solutions"
   add_foreign_key "ratings", "users"
   add_foreign_key "solutions", "questions"
