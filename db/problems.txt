@@ -64,7 +64,7 @@ What does $("div") select?
 
 ########### MORE CODING BASED ###################
 
-# Fibonacci
+# Fibonacci - Medium
 
 By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
 
@@ -79,7 +79,7 @@ Write a function that accepts a number and returns the number at that position i
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# First Non-repeated character
+# First Non-repeated character - Easy
 
 Write a function that accepts a single string input and returns the first non-repeated character.
 
@@ -90,21 +90,21 @@ Write a function that accepts a single string input and returns the first non-re
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Integer Length
+# Integer Length - Easy
 
 Write a function that takes an integer as input and returns the number of digits in that integer.
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Largest Palindrome
+# Largest Palindrome - Hard
 
 Write a function that finds the largest palindrome in a string. All characters can be valid for the palindrome, including whitespace. In the string "I am a red racecar driver" - the largest palindrome would be "d racecar d".
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Longest Words
+# Longest Words - Easy
 
 Write a function that returns the longest word(s) from a sentence. The function should not return any duplicate words (case-insensitive).
 
@@ -118,14 +118,14 @@ longestWords("Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo") 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Missing Number
+# Missing Number - Xnay
 
 Write a function that accepts an array of integers in random order of unknown length, but with one number missing. Return the missing number.
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Multiples of 3 and 5
+# Multiples of 3 and 5 - Medium
 
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
@@ -137,14 +137,14 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Numeric String
+# Numeric String - Easy
 
 Format any number into a string with "," (commas) in the correct places. E.g. "1,000,000".
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Sum of Array Plus One
+# Sum of Array Plus One - Easy
 
 Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.
 
@@ -154,19 +154,19 @@ plusOneSum([1, 2, 3, 4]); // 14
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Sorted Array Search
+# Sorted Array Search - Easy
 
 Given an array of numbers sorted in ascending order, write a function that will return the index at which the number is found.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Reverse Words in a String
+# Reverse Words in a String - Easy
 
 Given an input string, reverse all the words. To clarify, input: "Interviews are awesome!" output: "awesome! are Interviews". Consider all consecutive non-whitespace characters as individual words. If there are multiple spaces between words reduce them to a single white space. Also remove all leading and trailing whitespaces. So, the output for "   CS degree", "CS    degree", "CS degree   ", or "   CS   degree   " are all the same: "degree CS".
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-You are given the following information, but you may prefer to do some research for yourself.
+You are given the following information, but you may prefer to do some research for yourself. Xnay
 
 1 Jan 1900 was a Monday.
 Thirty days has September,
@@ -180,7 +180,7 @@ How many Sundays fell on the first of the month during the twentieth century (1 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, - medium
 
 a2 + b2 = c2
 For example, 32 + 42 = 9 + 16 = 25 = 52.
@@ -190,7 +190,7 @@ Find the product abc.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. - Hard
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'auth/failure'
+
+  get 'auth/callback'
+
   post 'rating/create' => 'rating#create'
 
   post 'comments/create' => 'comments#create'
