@@ -1,3 +1,66 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+ font-family: 'Oswald', sans-serif;
+}
+
+div.container-fluid {
+  text-align: center;
+
+}
+
+#icon {
+  text-align: center;
+}
+
+
+
+// BUTTONS
+
+
+body > div.container-fluid > div > div > div {
+  margin-top: 40px;
+
+}
+
+.btn-group-vertical>.btn:first-child:not(:last-child) {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-primary {
+    color: black;
+    background-color: transparent;
+    border-color: black;
+}
+
+.btn-group-vertical>.btn:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+body > div.container-fluid > div > div > div > button:nth-child(1) {
+  margin-bottom: 15px;
+  width: 120px;
+  height: 42px;
+}
+
+body > div.container-fluid > div > div > div > button:nth-child(2) {
+  margin-bottom: 15px;
+  height: 42px;
+}
+
+body > div.container-fluid > div > div > div > button:nth-child(3) {
+  height: 42px;
+}
+
+
+

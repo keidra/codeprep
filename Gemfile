@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt'
 
 gem 'bootstrap_form'
+gem 'bootstrap-sass'
 
 # for Facebook OAuth
 gem 'omniauth'
