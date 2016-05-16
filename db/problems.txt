@@ -1,0 +1,167 @@
+What is JavaScript?
+
+Name some of the JavaScript features.
+
+What are the advantages of using JavaScript?
+
+What are disadvantages of using JavaScript?
+
+How can you create an Object in JavaScript?
+
+How can you read properties of an Object in JavaScript?
+
+How can you create an Array in JavaScript?
+
+How to read elements of an array in JavaScript?
+
+What is a named function in JavaScript? How to define a named function?
+
+How to define a anonymous function?
+
+Can you pass a anonymous function as an argument to another function?
+
+What is arguments object in JavaScript?
+
+How can you get the type of arguments passed to a function?
+
+What is the purpose of 'this' operator in JavaScript?
+
+What are the valid scopes of a variable in JavaScript?
+
+What is callback?
+
+Which built-in method returns the character at the specified index?
+
+Which built-in method combines the text of two strings and returns a new string?
+
+Which built-in method calls a function for each element in the array?
+
+Which built-in method returns the index within the calling String object of the first occurrence of the specified value?
+
+Which built-in method returns the length of the string?
+
+
+Which built-in method removes the last element from an array and returns that element?
+
+
+Which built-in method adds one or more elements to the end of an array and returns the new length of the array?
+
+Which built-in method reverses the order of the elements of an array?
+
+Which built-in method sorts the elements of an array?
+
+How typeof operator works?
+
+What typeof returns for a null value?
+
+What is Date object in JavaScript?
+
+What is Number object in JavaScript?
+
+What is purpose of onError event handler in JavaScript?
+
+What does $("div") select?
+
+########### MORE CODING BASED ###################
+
+# Fibonacci
+
+By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
+
+For example, the first ten Fibonacci numbers are:
+
+```
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+```
+
+Write a function that accepts a number and returns the number at that position in the fibonnaci sequence.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# First Non-repeated character
+
+Write a function that accepts a single string input and returns the first non-repeated character.
+
+```js
+"AABBC" // "C"
+"AABBCCDEEFF" // "D"
+```
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Integer Length
+
+Write a function that takes an integer as input and returns the number of digits in that integer.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Largest Palindrome
+
+Write a function that finds the largest palindrome in a string. All characters can be valid for the palindrome, including whitespace. In the string "I am a red racecar driver" - the largest palindrome would be "d racecar d".
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Longest Words
+
+Write a function that returns the longest word(s) from a sentence. The function should not return any duplicate words (case-insensitive).
+
+## Example
+
+```js
+longestWords("You are just an old antidisestablishmentarian") // ["antidisestablishmentarian"]
+longestWords("I gave a present to my parents") // ["present", "parents"]
+longestWords("Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo") // ["buffalo"] or ["Buffalo"]
+```
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Missing Number
+
+Write a function that accepts an array of integers in random order of unknown length, but with one number missing. Return the missing number.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Multiples of 3 and 5
+
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Find the sum of all the multiples of 3 or 5 below 1000.
+
+## Source
+
+[http://projecteuler.net/problem=1](http://projecteuler.net/problem=1)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Numeric String
+
+Format any number into a string with "," (commas) in the correct places. E.g. "1,000,000".
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Sum of Array Plus One
+
+Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.
+
+```
+plusOneSum([1, 2, 3, 4]); // 14
+```
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Sorted Array Search
+
+Given an array of numbers sorted in ascending order, write a function that will return the index at which the number is found.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# Reverse Words in a String
+
+Given an input string, reverse all the words. To clarify, input: "Interviews are awesome!" output: "awesome! are Interviews". Consider all consecutive non-whitespace characters as individual words. If there are multiple spaces between words reduce them to a single white space. Also remove all leading and trailing whitespaces. So, the output for "   CS degree", "CS    degree", "CS degree   ", or "   CS   degree   " are all the same: "degree CS".
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
