@@ -29,12 +29,9 @@ ActiveRecord::Schema.define(version: 20160514235004) do
 
   create_table "questions", force: :cascade do |t|
     t.string   "content"
-    t.integer  "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "questions", ["tag_id"], name: "index_questions_on_tag_id", using: :btree
 
   create_table "questions_tags", force: :cascade do |t|
     t.integer  "question_id"
@@ -84,7 +81,6 @@ ActiveRecord::Schema.define(version: 20160514235004) do
 
   add_foreign_key "comments", "questions"
   add_foreign_key "comments", "users"
-  add_foreign_key "questions", "tags"
   add_foreign_key "questions_tags", "questions"
   add_foreign_key "questions_tags", "tags"
   add_foreign_key "ratings", "solutions"

@@ -1,4 +1,3 @@
 class Question < ActiveRecord::Base
-  belongs_to :tag
-  has_many :solution
+	has_and_belongs_to_many :tag
 end
