@@ -16,6 +16,15 @@ if stanDaMan.valid?
 	stanDaMan.save
 end
 
+daJuiceMan = User.new({
+	name: 'daJuiceMan',
+	email: 'daJuiceMan@mail.com',
+	password: 'YoMamasJuice'})
+
+if daJuiceMan.valid?
+	daJuiceMan.save
+end
+
 # create tags
 easyTag = Tag.find_or_create_by({name: 'easy'})
 mediumTag = Tag.find_or_create_by({name: 'middle'})
