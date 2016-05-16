@@ -73,6 +73,11 @@ integer_length = Question.find_or_create_by(
 	"\n     'apple' returns 5"
 	})
 
+largest_palindrome = Question.find_or_create_by(
+{content: "Write a function that finds the largest palindrome in a string. Al characters can be valid for the palindrome, including whitespace" +
+	"\n     In the string 'I am a red racecar driver' the largest palindrome would be 'd racecar d'"
+	})
+
 
 
 
@@ -94,6 +99,9 @@ unless non_repeat.tags.exists?({name: 'easy'})
 end
 unless integer_length.tags.exists?({name: 'easy'})
 	integer_length.tags << easyTag
+end
+unless largest_palindrome.tags.exists?({name: 'easy'})
+	largest_palindrome.tags <<hardTag
 end
 
 
