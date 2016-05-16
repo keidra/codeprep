@@ -1,0 +1,13 @@
+<h1>TITLE</h1>
+<h2>ICON GOES HERE</h2>
+<h1>SIGN UP</h1>
+
+<%= bootstrap_form_for(@user, {url: 'users/create' }) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.email_field :email %>
+  <%= f.password_field :password %>
+  <%= f.submit "SUBMIT" %>
+<% end %>
+
+
+<%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %>
