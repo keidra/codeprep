@@ -14,7 +14,23 @@
 <h1>SOLUTIONS</h1>
 
 
-<p><%=Solution.find_by({question_id:@question.id}).where.not({user_id:currentUser.id})%></p>
+<%= @solutions.each do |solution| %>
+  <div><%= link_to like_solution_path(solution), method: :put do %>
+    <button type="button" class="btn btn-info" aria-label="Left Align" >
+      <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+      <span class="badge"><%= solution.get_upvotes.size  %></span>
+    </button>
+    <% end  %>
+    </div>
+
+  <div><%= link_to dislike_solution_path(solution), method: :put do %>
+  <button type="button" class="btn btn-info" aria-label="Left Align" >
+      <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+      <span class="badge"><%= solution.get_downvotes.size  %></span>
+    </button>
+  </div>
+  <% end %>
+  <% end %>
 
 <p>SOLUTION BY USER 2</p>
 
