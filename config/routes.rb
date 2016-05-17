@@ -1,40 +1,60 @@
 Rails.application.routes.draw do
 
+ 
+# FACEBOOK
   get 'auth/failure'
 
   get 'auth/callback'
 
+
+# RATINGS
   post 'rating/create' => 'rating#create'
 
+# COMMENTS
   post 'comments/create' => 'comments#create'
 
   delete 'comments/destroy' => 'comments#destroy'
+
+# SOLUTIONS
 
   get 'solutions/index' => 'solutions#index'
 
   get 'solutions/new' => 'solutions#new'
 
-  delete 'solutions/destroy' => 'solutions#destroy'
+  delete 'solutions/:id' => 'solutions#destroy'
 
   post 'solutions/create' => 'solutions#create'
 
   get 'solutions/:id' => 'solutions#show'
 
+  # QUESTIONS
+
   get 'questions/:id' => 'questions#show'
 
-  post 'sessions/create' => 'sessions#create'
+  
+#SIGN-UP
 
-  get 'sessions/destroy' => 'sessions#destroy'
+  get 'signup' => 'users#new', as: :users
 
-  post 'users/create' => 'users#create'
+  post 'signup' => 'users#create'
 
-  put 'users/update' => 'users#update'
+# LOGIN
 
-  get 'users/edit' => 'users#update'
+  get 'login' => 'sessions#new'
 
-  get 'users/new' => 'users#new'
+  post 'login' => 'sessions#create'
+
+# LOGOUT  
+
+  delete 'logout' => 'sessions#destroy'
+
+
+
+
 
   root 'main#index'
+
+  #SAMPLE PAGE
 
   get '/sample' => 'main#sample'
 

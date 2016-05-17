@@ -2,7 +2,7 @@
    <img src="http://i22.photobucket.com/albums/b315/Doifreakuout14/Screen%20Shot%202016-05-16%20at%207.54.25%20PM.png"> 
 <h1>SIGN UP</h1>
 
-<%= bootstrap_form_for(@user, {url: 'users/create' }) do |f| %>
+<%= bootstrap_form_for(@user, {url: 'signup' }) do |f| %>
   <%= f.text_field :name %>
   <%= f.email_field :email %>
   <%= f.password_field :password %>
