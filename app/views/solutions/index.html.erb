@@ -15,10 +15,13 @@
 
 
 <%= @solutions.each do |solution| %>
-  <div><%= link_to like_solution_path(solution), method: :put do %>
+
+  <div><p style="background-color: gray;"><%= solution.content %></p>
+
+  <%= link_to like_solution_path(solution), method: :put do %>
     <button type="button" class="btn btn-info" aria-label="Left Align" >
       <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
-      <span class="badge"><%= solution.get_upvotes.size  %></span>
+      <span class="badge" style="margin-left: 15px;"><%= solution.get_upvotes.size  %></span>
     </button>
     <% end  %>
     </div>
@@ -26,7 +29,7 @@
   <div><%= link_to dislike_solution_path(solution), method: :put do %>
   <button type="button" class="btn btn-info" aria-label="Left Align" >
       <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-      <span class="badge"><%= solution.get_downvotes.size  %></span>
+      <span class="badge" style="margin-left: 15px;"><%= solution.get_downvotes.size  %></span>
     </button>
   </div>
   <% end %>

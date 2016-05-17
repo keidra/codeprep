@@ -1,9 +1,11 @@
 class SolutionsController < ApplicationController
   before_action :is_authenticated?, only: [:new, :create]
   before_action :set_solution, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+  before_action :current_user
 
   def index
-    @solutions = Solution.all
+
+    @solutions = Solution.all.order(:cached_votes_score => :desc)
   end
 
   def new
@@ -18,6 +20,7 @@ class SolutionsController < ApplicationController
   end
 
   def show
+
     @solution = Solution.includes(:user, :question, :rating, :comment).find({user: params[:user_id], question: params[:question_id]})
   end
 

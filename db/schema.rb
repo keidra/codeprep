@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517042343) do
+ActiveRecord::Schema.define(version: 20160517200529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,10 +58,24 @@ ActiveRecord::Schema.define(version: 20160517042343) do
     t.string   "content"
     t.integer  "user_id"
     t.integer  "question_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.integer  "cached_weighted_score",   default: 0
+    t.integer  "cached_weighted_total",   default: 0
+    t.float    "cached_weighted_average", default: 0.0
   end
 
+  add_index "solutions", ["cached_votes_down"], name: "index_solutions_on_cached_votes_down", using: :btree
+  add_index "solutions", ["cached_votes_score"], name: "index_solutions_on_cached_votes_score", using: :btree
+  add_index "solutions", ["cached_votes_total"], name: "index_solutions_on_cached_votes_total", using: :btree
+  add_index "solutions", ["cached_votes_up"], name: "index_solutions_on_cached_votes_up", using: :btree
+  add_index "solutions", ["cached_weighted_average"], name: "index_solutions_on_cached_weighted_average", using: :btree
+  add_index "solutions", ["cached_weighted_score"], name: "index_solutions_on_cached_weighted_score", using: :btree
+  add_index "solutions", ["cached_weighted_total"], name: "index_solutions_on_cached_weighted_total", using: :btree
   add_index "solutions", ["question_id"], name: "index_solutions_on_question_id", using: :btree
   add_index "solutions", ["user_id"], name: "index_solutions_on_user_id", using: :btree
 
