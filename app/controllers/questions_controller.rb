@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+	before_action :current_user
+
   def show
   	# @question = Question.find_by({id: ''})
     @tag = Tag.find_by_name params[:name]
@@ -7,17 +9,44 @@ class QuestionsController < ApplicationController
 
   def easy
   	@tag = Tag.find_by({name:"easy"})
-	  render plain @tag.name
+	  solution_count = Solution.count({user_id: @current_user.id})
+
+	  if(solution_count === 0)
+	  	@question = @tag.questions.limit(1).order("RANDOM()")
+		else
+			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
+			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
+		end
+
+		render plain: @question[0].content
   end
 
   def medium
   	@tag = Tag.find_by({name:"medium"})
-  	render plain: @tag
+	  solution_count = Solution.count({user_id: @current_user.id})
+
+	  if(solution_count === 0)
+	  	@question = @tag.questions.limit(1).order("RANDOM()")
+		else
+			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
+			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
+		end
+
+		render plain: @question[0].content
   end
 
   def hard
   	@tag = Tag.find_by({name:"hard"})
-  	render plain: @tag
+	  solution_count = Solution.count({user_id: @current_user.id})
+
+	  if(solution_count === 0)
+	  	@question = @tag.questions.limit(1).order("RANDOM()")
+		else
+			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
+			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
+		end
+
+		render plain: @question[0].content
   end
 
 end
