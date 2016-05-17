@@ -3,6 +3,11 @@ class AuthController < ApplicationController
   	render plain: "Auth failed"
   end
 
+  def logout
+    session[:user_id] = nil
+    redirect_to root_path
+  end
+
   def callback
   	# get user info back from the Auth provider
   	provider_user = request.env['omniauth.auth']
