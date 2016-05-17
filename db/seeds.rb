@@ -25,6 +25,29 @@ if daJuiceMan.valid?
 	daJuiceMan.save
 end
 
+stevenSegal = User.new({
+	name: 'StevenSegal',
+	email: 'stevensegal@mail.com',
+	password: 'segals3333'})
+
+if stevenSegal.valid?
+	stevenSegal.save
+end
+
+kittyPurry = User.new({
+	name: 'KittyPurry',
+	email: 'kittypurry@mail.com',
+	password: 'kattyperry'})
+
+jamesBond = User.new({
+	name: 'JamesBond',
+	email: 'jamesbond007@mail.com',
+	password: "casinoroyale"})
+
+if jamesBond.valid?
+	jamesBond.save
+end
+
 # create tags
 easyTag = Tag.find_or_create_by({name: 'easy'})
 mediumTag = Tag.find_or_create_by({name: 'middle'})
