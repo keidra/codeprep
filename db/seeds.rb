@@ -121,8 +121,6 @@ smallest_number = Question.find_or_create_by(
 	})
 
 
-
-
 # associate tags with questions
 unless acronym_q.tags.exists?({name: 'easy'})
 	acronym_q.tags << easyTag
