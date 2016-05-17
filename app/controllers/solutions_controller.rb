@@ -5,8 +5,11 @@ class SolutionsController < ApplicationController
 
   def index
 
-    @solutions = Solution.all.order(:cached_votes_score => :desc)
+    @question = Question.find_by_id question_params
+    @solutions = Solution.find_by({question_id: @question.id}).order(:cached_votes_score => :desc)
+
   end
+
 
   def new
   end
@@ -39,5 +42,9 @@ class SolutionsController < ApplicationController
   def set_solution
     @solution = Solution.find(params[:id])
     
+  end
+
+  def question_params 
+  params.require(:question).permit(:id)
   end
 end

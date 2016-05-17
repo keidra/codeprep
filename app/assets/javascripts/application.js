@@ -18,3 +18,11 @@
  $( document ).ready(function(){
    $(".button-collapse").sideNav();
  });
+
+
+  function getLevel() {
+      $.ajax({
+           type:'GET', 
+           url: '/questions/easy',
+      });
+ }
