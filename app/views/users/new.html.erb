@@ -1,4 +1,4 @@
-<h1>TITLE</h1>
+<h1>CODEPREP</h1>
 <h2>ICON GOES HERE</h2>
 <h1>SIGN UP</h1>
 
@@ -6,8 +6,9 @@
   <%= f.text_field :name %>
   <%= f.email_field :email %>
   <%= f.password_field :password %>
+  <%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %>
+  <br>
   <%= f.submit "SUBMIT" %>
 <% end %>
 
 
-<%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %>

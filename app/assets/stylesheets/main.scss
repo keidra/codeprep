@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$color-primary : white;
+$color-secondary : black;
+$nodeco : none;
+
 
 body {
  font-family: 'Oswald', sans-serif;
@@ -37,11 +41,6 @@ body > div.container-fluid > div > div > div {
     border-bottom-left-radius: 0;
 }
 
-.btn-primary {
-    color: black;
-    background-color: transparent;
-    border-color: black;
-}
 
 .btn-group-vertical>.btn:last-child:not(:first-child) {
     border-top-left-radius: 0;
@@ -55,15 +54,24 @@ body > div.container-fluid > div > div > div > button:nth-child(1) {
   margin-bottom: 15px;
   width: 143px;
   height: 50px;
+  background-color: transparent;
+  color: $color-secondary;
+  border: 1px solid black;
 }
 
 body > div.container-fluid > div > div > div > button:nth-child(2) {
   margin-bottom: 15px;
   height: 50px;
+  background-color: transparent;
+  color: $color-secondary;
+  border: 1px solid black;
 }
 
 body > div.container-fluid > div > div > div > button:nth-child(3) {
   height: 50px;
+   background-color: transparent;
+  color: $color-secondary;
+  border: 1px solid black;
 }
 
 .btn {
@@ -88,10 +96,56 @@ body > div.container-fluid > div > div > div > button:nth-child(3) {
     border-radius: 4px;
 }
 
+
+
+
+
+
+
+
+
+
 body > div.container-fluid > div > div > h1:nth-child(2) {
       margin-top: 70px;
 }
 
 body > div.container-fluid > div > div > h2 {
   margin-top: 50px;
+}
+
+nav .button-collapse {
+  color: black;
+  margin-right: 20px;
+}
+
+nav ul a {
+  color: $color-secondary;
+}
+
+body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(1) > a {
+  color: $color-secondary;
+  text-decoration: $nodeco;
+}
+
+body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(2) > a {
+  color: $color-secondary;
+  text-decoration: $nodeco;
+}
+
+body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(3) > a {
+  color: $color-secondary;
+  text-decoration: $nodeco;
+}
+
+body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(4) > a {
+  color: $color-secondary;
+  text-decoration: $nodeco;
+}
+
+body > nav {
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+
 }
