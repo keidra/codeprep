@@ -1,5 +1,8 @@
 # project3
 
+#### RUN BUNDLE INSTALL ###
+make sure you have " gem 'acts_as_votable' "  IN YOUR GEMFILE
+
 #Finding a new random question that hasn't been answered:
 
 ##First define a current user and a difficulty
