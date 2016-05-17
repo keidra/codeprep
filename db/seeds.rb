@@ -10,14 +10,7 @@
 stanDaMan = User.new({
 	name: 'StanDaMan',
 	email: 'standaman@mail.com',
-	password: 'Password123'})
-
-if stanDaMan.valid?
-	stanDaMan.save
-end
-
-stanDaMan = User.find_by({name: 'StanDaMan'})
-
+	
 daJuiceMan = User.new({
 	name: 'daJuiceMan',
 	email: 'daJuiceMan@mail.com',
@@ -68,28 +61,32 @@ hardTag = Tag.find_or_create_by({name: 'hard'})
 
 
 acronym_q = Question.find_or_create_by(
-	{content: "Write a function named 'acronym' that takes a string and returns an acronym." + 
+	{title: "Acronym" ,
+		content: "Write a function named 'acronym' that takes a string and returns an acronym." + 
 		"\n    acronym('Syntactically awesome style sheets'); // returns 'SASS'" +
 		"\n    acronym('Washinton State Department of Transportation') // returns 'WSDOT'" +
 		"\n    acronym(\"GNU's not Unix\") // returns 'GNU'"
 	})
 
 factorial_q =	Question.find_or_create_by(
-	{content: "Write a function named 'factorial' that takes an integer and returns the factorial of that number." +
+	{title: "Factorial" ,
+		content: "Write a function named 'factorial' that takes an integer and returns the factorial of that number." +
 		"\n    factorial(5); // returns 5x4x3x2x1 which is 120" +
 		"\n    factorial(0); // returns 1" +
 		"\n    factorial(-1); // returns undefined"
 	})
 
 factors_q =	Question.find_or_create_by(
-	{content: "Write a function named factors that takes an integer and returns an array of its non-negative factors." +
+	{title: "Factors",
+		content: "Write a function named factors that takes an integer and returns an array of its non-negative factors." +
 		"\n    factors(9); // returns [1,3,9]" +
 		"\n    factors(360); // returns [1,2,3,4,5,6,8,9,10,12,15,18,20,24,30,36,40,45,60,72,90,120,180,360]" +
 		"\n    factors(0); // returns [0]"
 	})
 
 fibonacci_m = Question.find_or_create_by(
-	{content: "By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two." +
+	{title: "Fibonacci" ,
+		content: "By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two." +
 		"\n    The first ten Fibonacci numbers are:" +
 		"\n    0, 1, 1, 2, 3, 5, 8, 13, 21, 34" +
 		"\n    Write a function that accepts a number and returns the number at that position in the fionnaci sequence."
@@ -97,22 +94,25 @@ fibonacci_m = Question.find_or_create_by(
 
 non_repeat = Question.find_or_create_by(
 {content: "Write a function that accepts a single string input and returns the first non-repeatd character" +
-	"\n      'AABBC' returns C" +
+	"\n      'AABBC' returns C" ,
 	"\n      'AABBCCDEEFF' returns D"
 	})
 
 integer_length = Question.find_or_create_by(
-{content: "Write a function that takes an integer as input and returns the number of digits in that integer" +
+{title: "Integer Length" ,
+	content: "Write a function that takes an integer as input and returns the number of digits in that integer" +
 	"\n     'apple' returns 5"
 	})
 
 largest_palindrome = Question.find_or_create_by(
-{content: "Write a function that finds the largest palindrome in a string. Al characters can be valid for the palindrome, including whitespace" +
+{title: "Longest Palindrome" ,
+	content: "Write a function that finds the largest palindrome in a string. Al characters can be valid for the palindrome, including whitespace" +
 	"\n     In the string 'I am a red racecar driver' the largest palindrome would be 'd racecar d'"
 	})
 
 longest_word = Question.find_or_create_by(
-{content: "Write a function that returns the longest word(s) from a sentence." +
+{title: "Longest Word" ,
+	content: "Write a function that returns the longest word(s) from a sentence." +
 	"\n     The function should not return any duplicate words (case-insensitive)." +
 	"\n     Examples:" +
 	"\n     longestWords('You are just an old antidisestablishmentarian') returns 'antidisestablishmentarian'" +
@@ -120,17 +120,19 @@ longest_word = Question.find_or_create_by(
 	})
 
 multiples_3and5 = Question.find_or_create_by(
-{content: "If we list all the natural numbers below 10 that are multiples of 3 or 5," +
+{title: "Multiples",
+	content: "If we list all the natural numbers below 10 that are multiples of 3 or 5," +
 	"\n      we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000."
 	})
 
 numeric_string = Question.find_or_create_by(
-{content: "Format any number into a string with ',' (commas) in the correct places." +
+{title: "Numeric String with Commas",
+	content: "Format any number into a string with ',' (commas) in the correct places." +
 	"\n      Example: 1,000,000"
 	})
 
 sumofarray = Question.find_or_create_by(
-{content: "Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each" +
+{title: "Array Sum"content: "Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each" +
 	"\n     plusOneSum([1, 2, 3, 4]) returns 14"
 	})
 
@@ -140,14 +142,16 @@ sorted_array = Question.find_or_create_by(
 	})
 
 pythagorean_triplet = Question.find_or_create_by(
-{content: "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a2 + b2 = c2" +
+{title: "Pythagorean Triplet" ,
+	content: "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a2 + b2 = c2" +
 	"\n     For example: 32 + 42 = 9 + 16 = 25 = 52" +
 	"\n     There exists exactly one Pythagorean triplet for which a + b +c = 1000" +
 	"\n     Find the product abc"
 	})
 
 smallest_number = Question.find_or_create_by(
-{content: "2520 is the smallest number that can be divided by each of the numbers" +
+{title: "Smallest Number" ,
+	content: "2520 is the smallest number that can be divided by each of the numbers" +
 	"\n     from 1 to 10 without any remainder." +
 	"\n     What is the smallest positive number that is evenly divisible by" +
 	"\n     all the numbers from one to 20?"
