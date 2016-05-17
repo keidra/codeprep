@@ -92,7 +92,8 @@ multiples_3and5 = Question.find_or_create_by(
 	})
 
 numeric_string = Question.find_or_create_by(
-{content: "Format any number into a string with "," (commas) in the correct places. E.g. "1,000,000"."
+{content: "Format any number into a string with ',' (commas) in the correct places." +
+	"\n      Example: 1,000,000"
 	})
 
 sumofarray = Question.find_or_create_by(
