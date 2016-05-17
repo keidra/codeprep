@@ -13,18 +13,16 @@ body {
 
 div.container-fluid {
   text-align: center;
+ }
 
+body > div.container-fluid {
+   margin-left: 200px;
+    width: 900px;
 }
 
 #icon {
   text-align: center;
 }
-
-body > div.container-fluid {
-  margin-left: 25px;
-}
-
-
 
 // BUTTONS
 
@@ -96,15 +94,6 @@ body > div.container-fluid > div > div > div > button:nth-child(3) {
     border-radius: 4px;
 }
 
-
-
-
-
-
-
-
-
-
 body > div.container-fluid > div > div > h1:nth-child(2) {
       margin-top: 70px;
 }
@@ -144,8 +133,34 @@ body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(4) > a {
 
 body > nav {
     background-color: transparent;
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
+    box-shadow: none;
+}
+
+body > div.container-fluid > div > div > img {
+  width: 60%;
+}
+
+
+
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+
+body > nav > div > a.button-collapse {
+  margin-top: 10px;
+}
+
+body > div.container-fluid > div > div > h1:nth-child(2) {
+  font-size: 2.2em;
+}
+
+body > div.container-fluid > div > div > img {
+    width: 150%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
 
 }

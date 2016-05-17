@@ -1,3 +1,45 @@
 // Place all the styles related to the solutions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+body > img {
+   width: 60%;
+}
+
+
+body {
+ font-family: 'Oswald', sans-serif;
+}
+
+div.container-fluid {
+  text-align: center;
+ }
+
+body > div.container-fluid {
+   margin-left: 200px;
+    width: 900px;
+}
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+
+body > nav > div > a.button-collapse {
+  margin-top: 10px;
+}
+
+body > div.container-fluid > div > div > h1:nth-child(2) {
+  font-size: 2.2em;
+}
+
+body > div.container-fluid > div > div > img {
+    width: 150%;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+}
