@@ -93,7 +93,8 @@ fibonacci_m = Question.find_or_create_by(
 	})
 
 non_repeat = Question.find_or_create_by(
-{content: "Write a function that accepts a single string input and returns the first non-repeatd character" +
+{title: "Non-Repeat",
+	content: "Write a function that accepts a single string input and returns the first non-repeatd character" +
 	"\n      'AABBC' returns C" ,
 	"\n      'AABBCCDEEFF' returns D"
 	})
@@ -132,12 +133,14 @@ numeric_string = Question.find_or_create_by(
 	})
 
 sumofarray = Question.find_or_create_by(
-{title: "Array Sum"content: "Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each" +
+{title: "Array Sum",
+	content: "Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each" +
 	"\n     plusOneSum([1, 2, 3, 4]) returns 14"
 	})
 
 sorted_array = Question.find_or_create_by(
-{content: "Given an array of numbers sorted in ascending order, write a function" +
+{title: "Sorted Array",
+	content: "Given an array of numbers sorted in ascending order, write a function" +
 	"\n     that will return the index at which the number is found"
 	})
 
