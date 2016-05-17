@@ -78,6 +78,47 @@ largest_palindrome = Question.find_or_create_by(
 	"\n     In the string 'I am a red racecar driver' the largest palindrome would be 'd racecar d'"
 	})
 
+longest_word = Question.find_or_create_by(
+{content: "Write a function that returns the longest word(s) from a sentence." +
+	"\n     The function should not return any duplicate words (case-insensitive)." +
+	"\n     Examples:" +
+	"\n     longestWords("You are just an old antidisestablishmentarian") returns 'antidisestablishmentarian'" +
+	"\n     longestWords("Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo" returns 'buffalo' or 'Buffalo'" +
+	})
+
+multiples_3and5 = Question.find_or_create_by(
+{content: "If we list all the natural numbers below 10 that are multiples of 3 or 5," +
+	"\n      we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000."
+	})
+
+numeric_string = Question.find_or_create_by(
+{content: "Format any number into a string with "," (commas) in the correct places. E.g. "1,000,000"."
+	})
+
+sumofarray = Question.find_or_create_by(
+{content: "Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each" +
+	"\n     plusOneSum([1, 2, 3, 4]) returns 14"
+	})
+
+sorted_array = Question.find_or_create_by(
+{content: "Given an array of numbers sorted in ascending order, write a function" +
+	"\n     that will return the index at which the number is found"
+	})
+
+pythagorean_triplet = Question.find_or_create_by(
+{content: "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a2 + b2 = c2" +
+	"\n     For example: 32 + 42 = 9 + 16 = 25 = 52" +
+	"\n     There exists exactly one Pythagorean triplet for which a + b +c = 1000" +
+	"\n     Find the product abc"
+	})
+
+smallest_number = Question.find_or_create_by(
+{content: "2520 is the smallest number that can be divided by each of the numbers" +
+	"\n     from 1 to 10 without any remainder." +
+	"\n     What is the smallest positive number that is evenly divisible by" +
+	"\n     all the numbers from one to 20?"
+	})
+
 
 
 
@@ -103,6 +144,32 @@ end
 unless largest_palindrome.tags.exists?({name: 'easy'})
 	largest_palindrome.tags << hardTag
 end
+unless longest_word.tags.exists?({name: 'easy'})
+	longest_word.tags << easyTag
+end
+unless multiples_3and5.tags.exists?({name: 'medium'})
+	multiples_3and5.tags << mediumTag
+end
+unless numeric_string.tags.exists?(name: 'easy')
+	numeric_string.tags << easyTag
+end
+unless sumofarray.tags.exists?(name: 'easy')
+	sumofarray.tags << easyTag
+end
+unless sorted_array.tags.exists?(name: 'easy')
+	sorted_array.tags << easyTag
+end
+unless pythagorean_triplet.tags.exists?(name: 'medium')
+	pythagorean_triplet.tags << mediumTag
+end
+unless smallest_number.tags.exists?(name: 'hard')
+	smallest_number.tags << hardTag
+end
+
+
+
+
+
 
 
 
