@@ -30,7 +30,13 @@ Rails.application.routes.draw do
 
   # QUESTIONS
 
-  get 'questions/:name' => 'questions#show'
+  get 'questions/easy' => 'questions#easy'
+
+  get 'questions/medium' => 'questions#medium'
+
+  get 'questions/hard' => 'questions#hard'
+
+  #get 'questions/:name' => 'questions#show'
 
   
 

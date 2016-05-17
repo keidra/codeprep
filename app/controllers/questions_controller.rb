@@ -6,18 +6,18 @@ class QuestionsController < ApplicationController
   end
 
   def easy
-  	@tag = Tag.find_by_name "easy"
-  	render = :json => @tag
+  	@tag = Tag.find_by({name:"easy"})
+	  render plain @tag.name
   end
 
   def medium
-  	@tag = Tag.find_by_name "meduim"
-  	render = :json => @tag
+  	@tag = Tag.find_by({name:"medium"})
+  	render plain: @tag
   end
 
   def hard
-  	@tag = Tag.find_by_name "hard"
-  	render = :json => @tag
+  	@tag = Tag.find_by({name:"hard"})
+  	render plain: @tag
   end
 
 end
