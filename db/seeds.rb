@@ -29,6 +29,36 @@ end
 
 daJuiceMan = User.find_by({name: 'daJuiceMan'})
 
+stevenSegal = User.new({
+	name: 'StevenSegal',
+	email: 'stevensegal@mail.com',
+	password: 'segals3333'})
+
+if stevenSegal.valid?
+	stevenSegal.save
+end
+
+stevenSegal = User.find_by({name: 'stevenSegal'})
+
+kittyPurry = User.new({
+	name: 'KittyPurry',
+	email: 'kittypurry@mail.com',
+	password: 'kattyperry'})
+
+kittyPurry = User.find_by({name: 'kittyPurry'})
+
+jamesBond = User.new({
+	name: 'JamesBond',
+	email: 'jamesbond007@mail.com',
+	password: "casinoroyale"})
+
+if jamesBond.valid?
+	jamesBond.save
+end
+
+jamesBond = User.find_by({name: 'jamesBond'})
+
+
 # create tags
 easyTag = Tag.find_or_create_by({name: 'easy'})
 mediumTag = Tag.find_or_create_by({name: 'medium'})
@@ -50,7 +80,6 @@ factorial_q =	Question.find_or_create_by(
 		"\n    factorial(0); // returns 1" +
 		"\n    factorial(-1); // returns undefined"
 	})
-
 
 factors_q =	Question.find_or_create_by(
 	{content: "Write a function named factors that takes an integer and returns an array of its non-negative factors." +
@@ -171,12 +200,7 @@ end
 
 
 
-
-
-
-
-
-# answer a question
+# solutions 
 factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: factors_q.id,
 	content: "function factors(x){" +
 		"\n  var factorArr = [];" +
@@ -192,6 +216,5 @@ factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: fact
 		"\n    factorArr.sort(function(a,b){return a-b});" +
 		"\n  return factorArr;" +
 		"}"})
-
 
 	
