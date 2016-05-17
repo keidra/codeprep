@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'auth/callback'
 
+  get 'auth/:provider/callback' => 'auth#callback'
 
 # RATINGS
   post 'rating/create' => 'rating#create'
