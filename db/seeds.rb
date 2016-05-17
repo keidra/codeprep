@@ -83,7 +83,7 @@ longest_word = Question.find_or_create_by(
 	"\n     The function should not return any duplicate words (case-insensitive)." +
 	"\n     Examples:" +
 	"\n     longestWords('You are just an old antidisestablishmentarian') returns 'antidisestablishmentarian'" +
-	"\n     longestWords('Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo') returns 'buffalo' or 'Buffalo'" +
+	"\n     longestWords('Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo') returns 'buffalo' or 'Buffalo'"
 	})
 
 multiples_3and5 = Question.find_or_create_by(
