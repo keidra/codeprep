@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback' => 'auth#callback'
 
 # RATINGS
-  post 'rating/create' => 'rating#create'
+  # put 'solutions/:id/like' => 'rating#create'
+  
+  # put 'solutions/:id/dislike' => 'rating#create'
 
 # COMMENTS
   post 'comments/create' => 'comments#create'
@@ -58,7 +60,16 @@ Rails.application.routes.draw do
 
 # LOGOUT  
 
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
+
+# RATINGS
+
+  resources :solutions do
+    member do
+      put "like", to: "solutions#upvote"
+      put "dislike", to: "solutions#downvote"
+    end
+  end
 
 
 

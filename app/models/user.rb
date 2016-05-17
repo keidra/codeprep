@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  acts_as_voter
 	validates :email,
 	presence: true,												#must exist
 	uniqueness: {case_sensitive: false},	#option added
