@@ -10,6 +10,13 @@
 stanDaMan = User.new({
 	name: 'StanDaMan',
 	email: 'standaman@mail.com',
+	password: 'password1234'})
+
+if stanDaMan.valid?
+	stanDaMan.save
+end
+
+stanDaMan = User.find_by({name: 'stanDaMan'})
 	
 daJuiceMan = User.new({
 	name: 'daJuiceMan',
@@ -95,7 +102,7 @@ fibonacci_m = Question.find_or_create_by(
 non_repeat = Question.find_or_create_by(
 {title: "Non-Repeat",
 	content: "Write a function that accepts a single string input and returns the first non-repeatd character" +
-	"\n      'AABBC' returns C" ,
+	"\n      'AABBC' returns C" +
 	"\n      'AABBCCDEEFF' returns D"
 	})
 
