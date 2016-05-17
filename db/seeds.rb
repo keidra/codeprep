@@ -58,9 +58,10 @@ end
 
 jamesBond = User.find_by({name: 'jamesBond'})
 
+
 # create tags
 easyTag = Tag.find_or_create_by({name: 'easy'})
-mediumTag = Tag.find_or_create_by({name: 'middle'})
+mediumTag = Tag.find_or_create_by({name: 'medium'})
 hardTag = Tag.find_or_create_by({name: 'hard'})
 
 # create questions
@@ -215,8 +216,5 @@ factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: fact
 		"\n    factorArr.sort(function(a,b){return a-b});" +
 		"\n  return factorArr;" +
 		"}"})
-
-
-
 
 	
