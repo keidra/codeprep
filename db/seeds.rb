@@ -16,6 +16,8 @@ if stanDaMan.valid?
 	stanDaMan.save
 end
 
+stanDaMan = User.find_by({name: 'StanDaMan'})
+
 daJuiceMan = User.new({
 	name: 'daJuiceMan',
 	email: 'daJuiceMan@mail.com',
@@ -25,9 +27,11 @@ if daJuiceMan.valid?
 	daJuiceMan.save
 end
 
+daJuiceMan = User.find_by({name: 'daJuiceMan'})
+
 # create tags
 easyTag = Tag.find_or_create_by({name: 'easy'})
-mediumTag = Tag.find_or_create_by({name: 'middle'})
+mediumTag = Tag.find_or_create_by({name: 'medium'})
 hardTag = Tag.find_or_create_by({name: 'hard'})
 
 # create questions
@@ -122,5 +126,6 @@ factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: fact
 		"\n    factorArr.sort(function(a,b){return a-b});" +
 		"\n  return factorArr;" +
 		"}"})
+
 
 	
