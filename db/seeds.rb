@@ -272,4 +272,62 @@ factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: fact
 		"\n  return factorArr;" +
 		"}"})
 
+fibonacci_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: fibonacci_m.id,
+	content: "def fib(n)" +
+  "\n      i = 0" +
+  "\n      e = 1" +
+  "\n      fibn = [0]" +
+  "\n      while i < n" +
+  "\n      fibn.push(e)" +
+	"\n      i += 1" +  
+  "\n      e += fibn[i - 1]" +  
+  "\n      end" +
+  "\n      print fibn" +
+  "\n      end"
+	})
+
+balanced_brakets_a = Solution.find_or_create_by({user_id: kittyPurry.id, question_id: balanced_brakets.id,
+	content: "var brackets = {" +
+  "\n      '(': ')', " +
+  "\n      '{': '}', " +
+	"\n      \"'[': ']'\" " +
+	"\n      };" +
+	"\n      " +
+	"\n      // On each input string, process it using the balance checker " +
+	"\n      module.exports = function (string) {" +
+  "\n      var stack = [];" +
+  "\n      // Process every character on input" +
+  "\n      for (var i = 0; i < string.length; i++) {" +
+  "\n  		 if (brackets[stack[stack.length - 1]] === string[i]) {" +
+  "\n      stack.pop();" +
+  "\n      } else {" +
+  "\n      stack.push(string[i]);" +
+  "\n      } " +
+  "\n      }" 
+	}) 
+
+balanced_backets_a2 = Solution.find_or_create_by({user_id: stevenSegal.id, question_id: balanced_brakets.id,
+content: "# Use a dictionary to map sets of brackets to their opposites" +
+"\n      brackets = {" +
+"\n      '(': ')'," +
+"\n      '{': '}', " +
+"\n      '[': ']' " +
+"\n      }"  +
+"\n      # On each input string, process it using the balance checker" +
+"\n      def balancedBrackets(string):" +
+"\n      stack = []" +
+"\n      # Process every character on input" +
+"\n      for char in string:" +
+"\n      # Assign an initial value in case the stack is empty" +
+"\n      last = 0" +
+"\n      # Assign the value of the last element if stack is not empty" +
+"\n      if stack:" +
+"\n      last = stack[len(stack) - 1]" +
+"\n      if stack and last in brackets and brackets[last] == char:" +
+"\n      stack.pop()" +
+"\n      else:" +
+"\n      stack.append(char)" +
+"\n      return not stack" +
+	})
+
 	
