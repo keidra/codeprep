@@ -327,7 +327,6 @@ content: "# Use a dictionary to map sets of brackets to their opposites" +
 "\n      stack.pop()" +
 "\n      else:" +
 "\n      stack.append(char)" +
-"\n      return not stack" +
-	})
+"\n      return not stack" + })
 
 	
