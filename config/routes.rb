@@ -75,11 +75,13 @@ get 'main' => 'main#index'
 
 
 
+
+
   root 'users#new'
 
-  #SAMPLE PAGE
+  #ABOUT PAGE
 
-  get '/sample' => 'main#sample'
+  get 'about' => 'main#about'
 
 
   resources :tags

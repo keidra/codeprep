@@ -1,7 +1,18 @@
-Logged in as <%= @current_user.name %>
+<%= render "partials/nav" %>
 
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-6 col-sm-4 col-lg-12">
+ <h3> Logged in as <%= @current_user.name %></h3>
 <% @solutions.each do |solution|  %>
 	<h3><%= solution.question.title %></h3>
 	<pre><%= solution.question.content %></pre>
 	<pre><%= solution.content %></pre>
 <% end %>
+</div>
+</div>
+</div>
