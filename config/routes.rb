@@ -38,7 +38,7 @@ Rails.application.routes.draw do
 
   get 'questions/hard' => 'questions#hard'
 
-  #get 'questions/:name' => 'questions#show'
+  get 'questions/show' => 'questions#show'
   
 #SIGN-UP
 
@@ -65,6 +65,10 @@ Rails.application.routes.draw do
     end
   end
 
+
+#START CHALLENGE
+
+get 'main' => 'main#index'
 
 
 

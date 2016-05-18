@@ -5,7 +5,7 @@ class SolutionsController < ApplicationController
 
   def index
 
-    @question = Question.find_by_id question_params
+    @question = Question.find(params[:id])
     @solutions = Solution.find_by({question_id: @question.id}).order(:cached_votes_score => :desc)
 
   end
