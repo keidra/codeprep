@@ -45,6 +45,10 @@ kittyPurry = User.new({
 	email: 'kittypurry@mail.com',
 	password: 'kattyperry'})
 
+if kittyPurry.valid?
+	kittyPurry.save
+end
+
 kittyPurry = User.find_by({name: 'KittyPurry'})
 
 jamesBond = User.new({
