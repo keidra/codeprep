@@ -8,10 +8,20 @@ $color-primary : white;
 $color-secondary : black;
 $nodeco : none;
 
-body {
-    font-family: 'Oswald',sans-serif;
+
+
+html *
+{
+   color: black !important;
+  font-family: 'Roboto'!important;
+  font-weight: 200 !important;
 }
 
+body > nav > div > a.brand-logo {
+    color: black;
+    margin-left: 20px;
+    text-decoration: none;
+}
 body > nav > div > ul > li {
     margin-right: 30px;
     font-size: 30px;
@@ -19,6 +29,11 @@ body > nav > div > ul > li {
 
 div.container-fluid {
     text-align: center;
+}
+
+a:focus, a:hover {
+    color: transparent;
+    text-decoration: none;
 }
 
 body > div.container-fluid {
@@ -130,7 +145,7 @@ body > div.container-fluid > div > div > form > input.btn.btn-primary {
     margin-right: 30px;
     width: 150px;
     height: 50px;
-    
+
 }
 
 .btn {
@@ -167,6 +182,10 @@ body > div.container-fluid > div > div > h2 {
 body > div.container-fluid > div > div > h1 {
     font-size: 3.8rem;
     margin-top: 30px;
+}
+
+#title {
+    font-weight: 200;
 }
 
 nav .button-collapse {
@@ -233,6 +252,22 @@ body > nav > div > a.button-collapse {
 #dropdown1 > li:nth-child(4) > a {
     color: black;
 }
+
+
+//LOGIN 
+
+body > div.container-fluid > div > div > form > div:nth-child(3) > label {
+    font-size: 1.8rem;
+    color: black;
+    float: left;
+}
+
+body > div.container-fluid > div > div > form > div:nth-child(4) > label {
+    font-size: 1.8rem;
+    color: black;
+    float: left;
+}
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
     body > nav > div > a.button-collapse {
