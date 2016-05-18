@@ -17,9 +17,14 @@ div.container-fluid {
 }
 
 body > div.container-fluid {
-    margin-top: 20px;
-    margin-left: 150px;
+    margin-top: 5px;
+    margin-left: 170px;
     width: 900px;
+}
+
+body > nav > div > a.brand-logo {
+    color: black;
+    margin-left: 20px;
 }
 
 #icon {
@@ -37,6 +42,29 @@ body > div.container-fluid > div > div > div {
     margin-top: 60px;
 }
 
+#easy {
+    width: 141px;
+    background-color: transparent;
+    color: black;
+    height: 45px;
+    margin-right: 10px;
+}
+
+#medium {
+    width: 141px;
+    background-color: transparent;
+    color: black;
+    height: 45px;
+    margin-right: 10px;
+}
+
+#hard {
+    width: 141px;
+    background-color: transparent;
+    color: black;
+    height: 45px;
+}
+
 .btn-group-vertical>.btn:first-child:not(:last-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -52,7 +80,7 @@ body > div.container-fluid > div > div > div {
 }
 
 body > div.container-fluid > div > div > div > button:nth-child(1) {
-    margin-bottom: 15px;
+    margin-right: 15px;
     width: 143px;
     height: 50px;
     background-color: transparent;
@@ -61,7 +89,7 @@ body > div.container-fluid > div > div > div > button:nth-child(1) {
 }
 
 body > div.container-fluid > div > div > div > button:nth-child(2) {
-    margin-bottom: 15px;
+    margin-right: 15px;
     height: 50px;
     background-color: transparent;
     color: $color-secondary;
@@ -94,7 +122,7 @@ body > div.container-fluid > div > div > div > button:nth-child(3) {
     user-select: none;
     background-image: none;
     border: 1px solid #000;
-    border-radius: 4px;
+   
 }
 
 body > div.container-fluid > div > div > h1:nth-child(2) {
@@ -103,6 +131,7 @@ body > div.container-fluid > div > div > h1:nth-child(2) {
 
 body > div.container-fluid > div > div > h2 {
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 nav .button-collapse {
@@ -140,12 +169,19 @@ body > nav {
 }
 
 body > div.container-fluid > div > div > img {
-    width: 60%;
+    width: 25%;
 }
 
 body > nav > div > a.button-collapse > i {
     text-decoration: none;
 }
+
+body > nav > div > a.button-collapse {
+    float: right;
+}
+
+
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
     body > nav > div > a.button-collapse {
