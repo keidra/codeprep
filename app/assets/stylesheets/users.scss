@@ -17,6 +17,24 @@ html *
   font-weight: 200 !important;
 }
 
+body > div > div > div > h3:nth-child(1) {
+    font-size: 1rem;
+}
+
+body > div.container-fluid > div > div > pre:nth-child(3) {
+    text-align: left;
+    padding-left: 80px;
+    font-family: monospace !important;
+    font-size: 0.8em;
+}
+
+body > div.container-fluid > div > div > pre:nth-child(4) {
+    text-align: left;
+    padding-left: 80px;
+    font-family: monospace !important;
+    font-size: 0.8em;
+}
+
 body > nav > div > a.brand-logo {
     color: black;
     margin-left: 20px;

@@ -19,7 +19,16 @@ class SolutionsController < ApplicationController
   end
 
   def create
+    @solution = User.create solution_params
 
+    if @solution
+      session[:user_id] = @solution.id
+      flash[:success] = "User logged in!!"
+      redirect_to root_path
+    else
+      flash[:danger] = "Credentials Invalid!!"
+      redirect_to login_path
+    end
   end
 
   def show
@@ -57,7 +66,11 @@ class SolutionsController < ApplicationController
   end
 
   def question_params 
-  params.require(:question).permit(:id)
+    params.require(:question).permit(:id)
+  end
+
+  def solution_params
+    params.require(:solution).permit(:content, :question_id)
   end
 
 end

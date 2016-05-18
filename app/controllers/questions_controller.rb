@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
 	before_action :current_user
+	before_action :is_authenticated?
 
   def show
   	# @question = Question.find_by({id: ''})
@@ -8,6 +9,7 @@ class QuestionsController < ApplicationController
   end
 
   def easy
+  	@solution = Solution.new
   	@tag = Tag.find_by({name:"easy"})
 	  solution_count = Solution.count({user_id: @current_user.id})
 
@@ -22,6 +24,7 @@ class QuestionsController < ApplicationController
   end
 
   def medium
+  	@solution = Solution.new
   	@tag = Tag.find_by({name:"medium"})
 	  solution_count = Solution.count({user_id: @current_user.id})
 
@@ -36,6 +39,7 @@ class QuestionsController < ApplicationController
   end
 
   def hard
+  	@solution = Solution.new
   	@tag = Tag.find_by({name:"hard"})
 	  solution_count = Solution.count({user_id: @current_user.id})
 
