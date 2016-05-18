@@ -286,25 +286,25 @@ fibonacci_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: fi
   "\n      end"
 	})
 
-balanced_brakets_a = Solution.find_or_create_by({user_id: kittyPurry.id, question_id: balanced_brakets.id,
-	content: "var brackets = {" +
-  "\n      '(': ')', " +
-  "\n      '{': '}', " +
-	"\n      \"'[': ']'\" " +
-	"\n      };" +
-	"\n      " +
-	"\n      // On each input string, process it using the balance checker " +
-	"\n      module.exports = function (string) {" +
-  "\n      var stack = [];" +
-  "\n      // Process every character on input" +
-  "\n      for (var i = 0; i < string.length; i++) {" +
-  "\n  		 if (brackets[stack[stack.length - 1]] === string[i]) {" +
-  "\n      stack.pop();" +
-  "\n      } else {" +
-  "\n      stack.push(string[i]);" +
-  "\n      } " +
-  "\n      }" 
-	}) 
+# balanced_brakets_a = Solution.find_or_create_by({user_id: kittyPurry.id, question_id: balanced_brakets.id,
+# 	content: "var brackets = {" +
+#   "\n      '(': ')', " +
+#   "\n      '{': '}', " +
+# 	"\n      \"'[': ']'\" " +
+# 	"\n      };" +
+# 	"\n      " +
+# 	"\n      // On each input string, process it using the balance checker " +
+# 	"\n      module.exports = function (string) {" +
+#   "\n      var stack = [];" +
+#   "\n      // Process every character on input" +
+#   "\n      for (var i = 0; i < string.length; i++) {" +
+#   "\n  		 if (brackets[stack[stack.length - 1]] === string[i]) {" +
+#   "\n      stack.pop();" +
+#   "\n      } else {" +
+#   "\n      stack.push(string[i]);" +
+#   "\n      } " +
+#   "\n      }" 
+# 	}) 
 
 balanced_backets_a2 = Solution.find_or_create_by({user_id: stevenSegal.id, question_id: balanced_brakets.id,
 content: "# Use a dictionary to map sets of brackets to their opposites" +
