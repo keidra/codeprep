@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
 	before_action :current_user
+	before_action :is_authenticated?
 
   def show
   	# @question = Question.find_by({id: ''})
