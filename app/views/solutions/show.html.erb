@@ -1,6 +1,6 @@
 <%= render "partials/nav" %>
         
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-lg-12">
             <h1 id="title">CODEPREP</h1><img src=
@@ -30,6 +30,20 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-6 col-sm-10 col-lg-12">
+ <h3> Logged in as <%= @current_user.name %></h3>
+
+ <h3> Solution For: <%= @solution.question.title %>
+ <pre><%= @solution.content %></pre>
+
+<% @comments.each do |comment|  %>
+    <h3><%= comment.user.name %></h3>
+    <p><%= comment.content %></p>
+<% end %>
 </div>
-
-
+</div>
+</div>

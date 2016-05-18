@@ -37,7 +37,14 @@ class SolutionsController < ApplicationController
   def show
     @solution = Solution.includes(:question).find_by_id params[:id]
     @new_comment = Comment.new
-    @comments = Comment.includes(:user).find_by({solution_id: @solution.id})
+    @comment_count = Comment.where({solution_id: @solution.id}).count
+
+    if(@comment_count === 0)
+      @comments = []
+    else
+      @comments = Comment.includes(:user).where({solution_id: @solution.id})
+    end
+
   end
 
   def mysolutions
