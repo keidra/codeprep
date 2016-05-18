@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   get 'questions/hard' => 'questions#hard'
 
-  get 'questions/show' => 'questions#show'
+  # get 'questions/show' => 'questions#show'
   
 #SIGN-UP
 
