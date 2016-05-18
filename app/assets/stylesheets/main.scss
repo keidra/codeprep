@@ -8,68 +8,63 @@ $nodeco : none;
 
 
 body {
- font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald',sans-serif;
 }
 
 div.container-fluid {
-  text-align: center;
- }
+    text-align: center;
+}
 
 body > div.container-fluid {
-   margin-left: 200px;
+    margin-left: 200px;
     width: 900px;
 }
 
 #icon {
-  text-align: center;
+    text-align: center;
 }
 
 // BUTTONS
-
-
 body > div.container-fluid > div > div > div {
-  margin-top: 60px;
-
+    margin-top: 60px;
 }
 
 .btn-group-vertical>.btn:first-child:not(:last-child) {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-
 .btn-group-vertical>.btn:last-child:not(:first-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-
 body > div.container-fluid > div > div > div > button:nth-child(1) {
-  margin-bottom: 15px;
-  width: 143px;
-  height: 50px;
-  background-color: transparent;
-  color: $color-secondary;
-  border: 1px solid black;
+    margin-bottom: 15px;
+    width: 143px;
+    height: 50px;
+    background-color: transparent;
+    color: $color-secondary;
+    border: 1px solid #000;
 }
 
 body > div.container-fluid > div > div > div > button:nth-child(2) {
-  margin-bottom: 15px;
-  height: 50px;
-  background-color: transparent;
-  color: $color-secondary;
-  border: 1px solid black;
+    margin-bottom: 15px;
+    height: 50px;
+    background-color: transparent;
+    color: $color-secondary;
+    border: 1px solid #000;
 }
 
 body > div.container-fluid > div > div > div > button:nth-child(3) {
-  height: 50px;
-   background-color: transparent;
-  color: $color-secondary;
-  border: 1px solid black;
+    height: 50px;
+    background-color: transparent;
+    color: $color-secondary;
+    border: 1px solid #000;
 }
 
 .btn {
@@ -90,45 +85,45 @@ body > div.container-fluid > div > div > div > button:nth-child(3) {
     -ms-user-select: none;
     user-select: none;
     background-image: none;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-radius: 4px;
 }
 
 body > div.container-fluid > div > div > h1:nth-child(2) {
-      margin-top: 70px;
+    margin-top: 70px;
 }
 
 body > div.container-fluid > div > div > h2 {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 nav .button-collapse {
-  color: black;
-  margin-right: 20px;
+    color: #000;
+    margin-right: 20px;
 }
 
 nav ul a {
-  color: $color-secondary;
+    color: $color-secondary;
 }
 
 body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(1) > a {
-  color: $color-secondary;
-  text-decoration: $nodeco;
+    color: $color-secondary;
+    text-decoration: $nodeco;
 }
 
 body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(2) > a {
-  color: $color-secondary;
-  text-decoration: $nodeco;
+    color: $color-secondary;
+    text-decoration: $nodeco;
 }
 
 body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(3) > a {
-  color: $color-secondary;
-  text-decoration: $nodeco;
+    color: $color-secondary;
+    text-decoration: $nodeco;
 }
 
 body > nav > div > ul.right.hide-on-med-and-down > li:nth-child(4) > a {
-  color: $color-secondary;
-  text-decoration: $nodeco;
+    color: $color-secondary;
+    text-decoration: $nodeco;
 }
 
 body > nav {
@@ -137,12 +132,11 @@ body > nav {
 }
 
 body > div.container-fluid > div > div > img {
-  width: 60%;
+    width: 60%;
 }
 
 body > nav > div > a.button-collapse > i {
-  text-decoration: none;
+    text-decoration: none;
 }
-
 
 
