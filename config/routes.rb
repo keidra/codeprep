@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   get 'mysolutions' => 'solutions#mysolutions'
 
+  put 'solutions/:id' => 'solutions#update'
+
   # QUESTIONS
 
   get 'questions/easy' => 'questions#easy'
