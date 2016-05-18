@@ -49,13 +49,13 @@ class SolutionsController < ApplicationController
   end
 
   def upvote
-  @solution.upvote_from current_user
-  redirect_to solutions_path
+    @solution.upvote_from current_user
+    redirect_to solutions_path
   end
 
   def downvote
-  @solution.downvote_from current_user
-  redirect_to solutions_path
+    @solution.downvote_from current_user
+    redirect_to solutions_path
   end
 
   private
