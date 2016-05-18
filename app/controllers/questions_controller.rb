@@ -3,9 +3,15 @@ class QuestionsController < ApplicationController
 	before_action :is_authenticated?
 
   def show
-  	# @question = Question.find_by({id: ''})
-    @tag = Tag.find_by_name params[:name]
-    # render :json => @tag
+  	@question = Question.find_by_id params[:id]
+  	@solution_count = Solution.where({question_id: @question.id}).count
+
+	  if(@solution_count === 0)
+	  	render plain: "No solutions with this question"
+		else
+			@solutions = Solution.find_by({question_id: @question.id})
+			render plain: @solution_count
+		end  	
   end
 
   def easy
@@ -20,7 +26,7 @@ class QuestionsController < ApplicationController
 			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
 		end
 
-		render plain: @question[0].content
+		# render plain: @question[0].content
   end
 
   def medium
@@ -35,7 +41,7 @@ class QuestionsController < ApplicationController
 			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
 		end
 
-		render plain: @question[0].content
+		# render plain: @question[0].content
   end
 
   def hard
@@ -50,7 +56,7 @@ class QuestionsController < ApplicationController
 			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
 		end
 
-		render plain: @question[0].content
+		# render plain: @question[0].content
   end
 
 end

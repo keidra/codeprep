@@ -19,20 +19,25 @@ class SolutionsController < ApplicationController
   end
 
   def create
-    @solution = User.create solution_params
 
-    if @solution
-      session[:user_id] = @solution.id
-      flash[:success] = "User logged in!!"
+    solution = Solution.create solution_params do |p|
+      p.user_id = @current_user.id
+      p.save
+    end
+    if solution.valid?
+      flash[:success] = 'Solution posted!'
       redirect_to root_path
     else
-      flash[:danger] = "Credentials Invalid!!"
-      redirect_to login_path
+      messages = solution.errors.map { |k, v| "#{k} #{v}" }
+      flash[:danger] = messages.join(', ')
+      redirect_to new_solution_path
     end
   end
 
   def show
-    @solution = Solution.includes(:user, :question, :rating, :comment).find({user: params[:user_id], question: params[:question_id]})
+    @solution = Solution.includes(:question).find_by_id params[:id]
+    @new_comment = Comment.new
+    @comments = Comment.includes(:user).find_by({solution_id: @solution.id})
   end
 
   def mysolutions
