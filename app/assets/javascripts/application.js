@@ -14,15 +14,31 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery 
+//= require materialize-sprockets 
 
  $( document ).ready(function(){
    $(".button-collapse").sideNav();
+
+
+     $('#easy').click(function() {
+    window.location.href = 'questions/easy';
+    return false;
+ });
+
+        $('#medium').click(function() {
+    window.location.href = 'questions/easy';
+    return false;
  });
 
 
-  function getLevel() {
-      $.ajax({
-           type:'GET', 
-           url: '/questions/easy',
-      });
- }
+       $('#hard').click(function() {
+    window.location.href = 'questions/easy';
+    return false;
+ });
+
+
+
+ });
+
+
