@@ -29,14 +29,14 @@ class SolutionsController < ApplicationController
   def mysolutions
     @solutions = Solution.includes(:question).where({user_id: @current_user.id})
 
-    @questions = []
+    #@questions = []
 
-    @solutions.each do |solution|
-      @questions << solution.question
-    end
+    #@solutions.each do |solution|
+    #  @questions << solution.question
+    #end
 
     #render :json => @solutions
-    render :json => @questions
+    #render :json => @questions
   end
 
   def upvote
