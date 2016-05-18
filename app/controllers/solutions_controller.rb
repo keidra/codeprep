@@ -27,8 +27,9 @@ class SolutionsController < ApplicationController
       p.save
     end
     if solution.valid?
+      redir_url = "/questions/" + solution.question_id
       flash[:success] = 'Solution posted!'
-      redirect_to root_path
+      redirect_to redir_url
     else
       messages = solution.errors.map { |k, v| "#{k} #{v}" }
       flash[:danger] = messages.join(', ')
