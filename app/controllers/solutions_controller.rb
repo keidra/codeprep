@@ -27,7 +27,7 @@ class SolutionsController < ApplicationController
       p.save
     end
     if solution.valid?
-      redir_url = "/questions/" + solution.question_id
+      redir_url = "/questions/" + solution.question_id.to_s
       flash[:success] = 'Solution posted!'
       redirect_to redir_url
     else
