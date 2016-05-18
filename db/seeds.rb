@@ -167,6 +167,34 @@ smallest_number = Question.find_or_create_by(
 	"\n     all the numbers from one to 20?"
 	})
 
+balanced_brakets = Question.find_or_create_by(
+{title: "Balanced Brackets",
+	content: "Write a function that accepts a string consisting entirely of brackets ([](){}) and returns whether it is balanced." +
+	"\n      Every "opening" bracket must be followed by a closing bracket of the same type. There can also be nested brackets, which adhere to the same rule." +
+	"\n      f('()[]{}(([])){[()][]}') returns True" +
+	"\n      f('())[]{}') returns False"
+	})
+
+room_number = Question.find_or_create_by(
+{title: "Room Number",
+	content: "You're in a hotel and you forgot what room number you were in but remember that the sum of it's divisors is greater than the number," +
+	"\n       yet there is no subset of those divisors that add up to the number itself. There are 100 rooms in the Hotel, what's your room number?"
+	})
+
+median_integer = Question.find_or_create_by(
+{title: "Median Integer",
+	content: "Given a stream of unsorted integers, find the median element in sorted order at any given time." +
+	"\n      You will be receiving a continuous stream of numbers in some random order and don’t know the stream length in advance." +
+	"\n      Write a function that finds the median of the already received numbers efficiently at any time." +
+	"\n      We will be asked to find the median multiple times. Just to recall, median is the middle element in an odd length sorted array," +
+	"\n      and in the even case it’s the average of the middle elements."
+	})
+
+same_digits = Question.find_or_create_by(
+{title: "Same Digits, Next highest Integer"
+	content: "Given a number, find the next higher number using only the digits in the given number." +
+	"\n       For example if the given number is 1234, next higher number with same digits is 1243."
+	})
 
 # associate tags with questions
 unless acronym_q.tags.exists?({name: 'easy'})
@@ -211,6 +239,19 @@ end
 unless smallest_number.tags.exists?(name: 'hard')
 	smallest_number.tags << hardTag
 end
+unless balanced_brakets.tags.exists?(name: 'medium')
+	balanced_brakets.tags << mediumTag
+end
+unless room_number.tags.exists?(name: 'hard')
+	room_number.tags << hardTag
+end
+unless median_integer.tags.exists?(name: 'hard')
+	median_number.tags << hardTag
+end
+unless same_digits.tags.exists?(name: 'hard')
+	same_digits.tags << hardTag	
+end
+
 
 
 
