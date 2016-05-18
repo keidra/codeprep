@@ -12,6 +12,11 @@ body {
     font-family: 'Oswald',sans-serif;
 }
 
+body > nav > div > ul > li {
+    margin-right: 30px;
+    font-size: 30px;
+}
+
 div.container-fluid {
     text-align: center;
 }
@@ -125,13 +130,18 @@ body > div.container-fluid > div > div > div > button:nth-child(3) {
    
 }
 
-body > div.container-fluid > div > div > h1:nth-child(2) {
-    margin-top: 70px;
-}
-
 body > div.container-fluid > div > div > h2 {
     margin-top: 50px;
     margin-bottom: 40px;
+}
+
+body > div.container-fluid > div > div > h2 {
+    font-size: 2.56rem;
+}
+
+body > div.container-fluid > div > div > h1 {
+    font-size: 3.8rem;
+    margin-top: 30px;
 }
 
 nav .button-collapse {
@@ -181,7 +191,23 @@ body > nav > div > a.button-collapse {
 }
 
 
+// NAV BAR 
 
+#dropdown1 > li:nth-child(1) > a {
+    color: black;
+}
+
+#dropdown1 > li:nth-child(2) > a {
+    color: black;
+}
+
+#dropdown1 > li:nth-child(3) > a {
+    color: black;
+}
+
+#dropdown1 > li:nth-child(4) > a {
+    color: black;
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
     body > nav > div > a.button-collapse {
