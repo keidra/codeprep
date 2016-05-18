@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 
   get 'solutions/:id' => 'solutions#show'
 
+  get 'mysolutions' => 'solutions#mysolutions'
+
   # QUESTIONS
 
   get 'questions/easy' => 'questions#easy'
@@ -73,11 +75,13 @@ get 'main' => 'main#index'
 
 
 
+
+
   root 'users#new'
 
-  #SAMPLE PAGE
+  #ABOUT PAGE
 
-  get '/sample' => 'main#sample'
+  get 'about' => 'main#about'
 
 
   resources :tags

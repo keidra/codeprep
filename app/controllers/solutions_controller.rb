@@ -23,8 +23,20 @@ class SolutionsController < ApplicationController
   end
 
   def show
-
     @solution = Solution.includes(:user, :question, :rating, :comment).find({user: params[:user_id], question: params[:question_id]})
+  end
+
+  def mysolutions
+    @solutions = Solution.includes(:question).where({user_id: @current_user.id})
+
+    #@questions = []
+
+    #@solutions.each do |solution|
+    #  @questions << solution.question
+    #end
+
+    #render :json => @solutions
+    #render :json => @questions
   end
 
   def upvote
@@ -47,4 +59,5 @@ class SolutionsController < ApplicationController
   def question_params 
   params.require(:question).permit(:id)
   end
+
 end

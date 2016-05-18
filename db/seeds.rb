@@ -16,7 +16,7 @@ if stanDaMan.valid?
 	stanDaMan.save
 end
 
-stanDaMan = User.find_by({name: 'stanDaMan'})
+stanDaMan = User.find_by({name: 'StanDaMan'})
 	
 daJuiceMan = User.new({
 	name: 'daJuiceMan',
@@ -256,20 +256,20 @@ end
 
 
 # solutions 
-# factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: factors_q.id,
-# 	content: "function factors(x){" +
-# 		"\n  var factorArr = [];" +
-# 		"\n  var limit = Math.sqrt(x);" +
-# 		"\n  for (let i = 1; i <= limit; i++){" +
-# 		"\n    if (x % i === 0){" +
-# 		"\n      factorArr.push(i);" +
-# 		"\n      if(i != x / i){" +
-# 		"\n        factorArr.push(x / i);" +
-# 		"\n        }" +
-# 		"\n      }" +
-# 		"\n    }" +
-# 		"\n    factorArr.sort(function(a,b){return a-b});" +
-# 		"\n  return factorArr;" +
-# 		"}"})
+factors_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: factors_q.id,
+	content: "function factors(x){" +
+		"\n  var factorArr = [];" +
+		"\n  var limit = Math.sqrt(x);" +
+		"\n  for (let i = 1; i <= limit; i++){" +
+		"\n    if (x % i === 0){" +
+		"\n      factorArr.push(i);" +
+		"\n      if(i != x / i){" +
+		"\n        factorArr.push(x / i);" +
+		"\n        }" +
+		"\n      }" +
+		"\n    }" +
+		"\n    factorArr.sort(function(a,b){return a-b});" +
+		"\n  return factorArr;" +
+		"}"})
 
 	
