@@ -1,7 +1,7 @@
 Logged in as <%= @current_user.name %>
 
 <% @solutions.each do |solution|  %>
-	<%= solution.question.title %>
-	<%= solution.question.content %>
-	<%= solution.content %>
+	<h3><%= solution.question.title %></h3>
+	<pre><%= solution.question.content %></pre>
+	<pre><%= solution.content %></pre>
 <% end %>
