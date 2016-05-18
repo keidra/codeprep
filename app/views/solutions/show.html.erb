@@ -38,7 +38,7 @@
  <h3> Logged in as <%= @current_user.name %></h3>
 
  <h3> Solution For: <%= @solution.question.title %>
- <pre><%= @solution.content %>
+ <pre><%= @solution.content %></pre>
 
 <% @comments.each do |comment|  %>
     <h3><%= comment.user.name %></h3>
