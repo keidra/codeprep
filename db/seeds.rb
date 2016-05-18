@@ -306,27 +306,27 @@ fibonacci_a = Solution.find_or_create_by({user_id: stanDaMan.id, question_id: fi
 #   "\n      }" 
 # 	}) 
 
-balanced_backets_a2 = Solution.find_or_create_by({user_id: stevenSegal.id, question_id: balanced_brakets.id,
-content: "# Use a dictionary to map sets of brackets to their opposites" +
-"\n      brackets = {" +
-"\n      '(': ')'," +
-"\n      '{': '}', " +
-"\n      '[': ']' " +
-"\n      }"  +
-"\n      # On each input string, process it using the balance checker" +
-"\n      def balancedBrackets(string):" +
-"\n      stack = []" +
-"\n      # Process every character on input" +
-"\n      for char in string:" +
-"\n      # Assign an initial value in case the stack is empty" +
-"\n      last = 0" +
-"\n      # Assign the value of the last element if stack is not empty" +
-"\n      if stack:" +
-"\n      last = stack[len(stack) - 1]" +
-"\n      if stack and last in brackets and brackets[last] == char:" +
-"\n      stack.pop()" +
-"\n      else:" +
-"\n      stack.append(char)" +
-"\n      return not stack"})
+# balanced_backets_a2 = Solution.find_or_create_by({user_id: stevenSegal.id, question_id: balanced_brakets.id,
+# content: "# Use a dictionary to map sets of brackets to their opposites" +
+# "\n      brackets = {" +
+# "\n      '(': ')'," +
+# "\n      '{': '}', " +
+# "\n      '[': ']' " +
+# "\n      }"  +
+# "\n      # On each input string, process it using the balance checker" +
+# "\n      def balancedBrackets(string):" +
+# "\n      stack = []" +
+# "\n      # Process every character on input" +
+# "\n      for char in string:" +
+# "\n      # Assign an initial value in case the stack is empty" +
+# "\n      last = 0" +
+# "\n      # Assign the value of the last element if stack is not empty" +
+# "\n      if stack:" +
+# "\n      last = stack[len(stack) - 1]" +
+# "\n      if stack and last in brackets and brackets[last] == char:" +
+# "\n      stack.pop()" +
+# "\n      else:" +
+# "\n      stack.append(char)" +
+# "\n      return not stack"})
 
 	
