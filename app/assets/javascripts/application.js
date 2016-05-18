@@ -26,7 +26,7 @@
     return false;
  });
 
-        $('#medium').click(function() {
+    $('#medium').click(function() {
     window.location.href = 'questions/medium';
     return false;
  });
@@ -42,6 +42,18 @@
     return false;
  });
 
+    $('.delete').click(function(e){
+        // url: 'solutions/:id'
+        var elem = $(this).parent();
+        var value = elem.attr('value');
+        console.log(value);
+
+
+    })
+
+    
+
+    
 
 
  });
