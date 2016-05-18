@@ -35,7 +35,7 @@ class QuestionsController < ApplicationController
 			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
 		end
 
-		render plain: @question[0].content
+		# render plain: @question[0].content
   end
 
   def hard
@@ -50,7 +50,7 @@ class QuestionsController < ApplicationController
 			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
 		end
 
-		render plain: @question[0].content
+		# render plain: @question[0].content
   end
 
 end

@@ -27,13 +27,13 @@
  });
 
         $('#medium').click(function() {
-    window.location.href = 'questions/easy';
+    window.location.href = 'questions/medium';
     return false;
  });
 
 
        $('#hard').click(function() {
-    window.location.href = 'questions/easy';
+    window.location.href = 'questions/hard';
     return false;
  });
 

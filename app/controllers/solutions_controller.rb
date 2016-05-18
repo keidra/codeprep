@@ -19,15 +19,18 @@ class SolutionsController < ApplicationController
   end
 
   def create
-    @solution = User.create solution_params
 
-    if @solution
-      session[:user_id] = @solution.id
-      flash[:success] = "User logged in!!"
+    solution = Solution.create solution_params do |p|
+      p.user_id = @current_user.id
+      p.save
+    end
+    if solution.valid?
+      flash[:success] = 'Solution posted!'
       redirect_to root_path
     else
-      flash[:danger] = "Credentials Invalid!!"
-      redirect_to login_path
+      messages = solution.errors.map { |k, v| "#{k} #{v}" }
+      flash[:danger] = messages.join(', ')
+      redirect_to new_solution_path
     end
   end
 
