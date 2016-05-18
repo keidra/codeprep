@@ -23,8 +23,13 @@ class SolutionsController < ApplicationController
   end
 
   def show
-
     @solution = Solution.includes(:user, :question, :rating, :comment).find({user: params[:user_id], question: params[:question_id]})
+  end
+
+  def mysolutions
+    @solutions = Solution.includes(:question).where({user_id: @current_user.id})
+    #render plain: @solutions[0].content
+    render :json => @solutions
   end
 
   def upvote

@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 
   get 'solutions/:id' => 'solutions#show'
 
+  get 'mysolutions' => 'solutions#mysolutions'
+
   # QUESTIONS
 
   get 'questions/easy' => 'questions#easy'
