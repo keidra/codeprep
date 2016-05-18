@@ -170,7 +170,7 @@ smallest_number = Question.find_or_create_by(
 balanced_brakets = Question.find_or_create_by(
 {title: "Balanced Brackets",
 	content: "Write a function that accepts a string consisting entirely of brackets ([](){}) and returns whether it is balanced." +
-	"\n      Every "opening" bracket must be followed by a closing bracket of the same type. There can also be nested brackets, which adhere to the same rule." +
+	"\n      Every 'opening' bracket must be followed by a closing bracket of the same type. There can also be nested brackets, which adhere to the same rule." +
 	"\n      f('()[]{}(([])){[()][]}') returns True" +
 	"\n      f('())[]{}') returns False"
 	})
@@ -181,7 +181,7 @@ room_number = Question.find_or_create_by(
 	"\n       yet there is no subset of those divisors that add up to the number itself. There are 100 rooms in the Hotel, what's your room number?"
 	})
 
-median_integer = Question.find_or_create_by(
+mid_integer = Question.find_or_create_by(
 {title: "Median Integer",
 	content: "Given a stream of unsorted integers, find the median element in sorted order at any given time." +
 	"\n      You will be receiving a continuous stream of numbers in some random order and don’t know the stream length in advance." +
@@ -191,7 +191,7 @@ median_integer = Question.find_or_create_by(
 	})
 
 same_digits = Question.find_or_create_by(
-{title: "Same Digits, Next highest Integer"
+{title: "Same Digits, Next highest Integer",
 	content: "Given a number, find the next higher number using only the digits in the given number." +
 	"\n       For example if the given number is 1234, next higher number with same digits is 1243."
 	})
@@ -245,8 +245,8 @@ end
 unless room_number.tags.exists?(name: 'hard')
 	room_number.tags << hardTag
 end
-unless median_integer.tags.exists?(name: 'hard')
-	median_number.tags << hardTag
+unless mid_integer.tags.exists?(name: 'hard')
+	mid_integer.tags << hardTag
 end
 unless same_digits.tags.exists?(name: 'hard')
 	same_digits.tags << hardTag	
