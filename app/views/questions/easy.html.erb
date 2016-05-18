@@ -1,27 +1,19 @@
 <%= render "partials/nav" %>
 
-
 <div class="container-fluid">
+ <h1>Problem:</h1>
+            <h3><%= @question[0].content %></h3>
     <div class="row">
         <div class="col-xs-6 col-sm-10 col-lg-12">
-            <h1>PROBLEM #1</h1>
             <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea class="materialize-textarea" id=
-                            "textarea1"></textarea> <label for="textarea1">Type
-                            Solution Here</label>
-                        </div>
-                    </div><button class="btn btn-primary" type=
-                    "button">SAVE</button> <button class="btn btn-primary"
-                    type="button">SUBMIT TO PUBLIC</button>
-                </form>
+           <%= bootstrap_form_for @solution do |t| %>
+              <%= t.text_area :content %>
+              <%= t.primary %>
+              <%= t.hidden_field :question_id, :value => @question[0].id %>
+            <% end %>
             </div>
         </div>
     </div>
 </div>
-
-
 
 
