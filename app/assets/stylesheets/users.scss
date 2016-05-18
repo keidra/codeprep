@@ -166,27 +166,6 @@ body > div.container-fluid > div > div > form > input.btn.btn-primary {
 
 }
 
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid #000;
-   
-}
 
 body > div.container-fluid > div > div > h2 {
     margin-top: 50px;
@@ -204,6 +183,10 @@ body > div.container-fluid > div > div > h1 {
 
 #title {
     font-weight: 200;
+}
+
+#login {
+    border: 1px solid black;  
 }
 
 nav .button-collapse {
