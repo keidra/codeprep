@@ -70,19 +70,13 @@ Rails.application.routes.draw do
 
 #START CHALLENGE
 
-get 'main' => 'main#index'
-
-
-
-
-
+  get 'main' => 'main#index'
 
   root 'users#new'
 
   #ABOUT PAGE
 
   get 'about' => 'main#about'
-
 
   resources :tags
 
