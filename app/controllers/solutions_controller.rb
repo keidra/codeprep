@@ -28,8 +28,15 @@ class SolutionsController < ApplicationController
 
   def mysolutions
     @solutions = Solution.includes(:question).where({user_id: @current_user.id})
-    #render plain: @solutions[0].content
-    render :json => @solutions
+
+    @questions = []
+
+    @solutions.each do |solution|
+      @questions << solution.question
+    end
+
+    #render :json => @solutions
+    render :json => @questions
   end
 
   def upvote
@@ -52,4 +59,5 @@ class SolutionsController < ApplicationController
   def question_params 
   params.require(:question).permit(:id)
   end
+
 end
