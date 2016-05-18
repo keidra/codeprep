@@ -39,12 +39,6 @@ Rails.application.routes.draw do
   get 'questions/hard' => 'questions#hard'
 
   #get 'questions/:name' => 'questions#show'
-
-  
-
-
-
-
   
 #SIGN-UP
 
@@ -75,7 +69,7 @@ Rails.application.routes.draw do
 
 
 
-  root 'main#index'
+  root 'users#new'
 
   #SAMPLE PAGE
 

@@ -1,14 +1,15 @@
-<h1 id="title">CODEPREP</h1>
-   <img src="http://i22.photobucket.com/albums/b315/Doifreakuout14/Screen%20Shot%202016-05-16%20at%207.54.25%20PM.png"> 
-<h1>SIGN UP</h1>
 <div class="container-fluid">
-<%= bootstrap_form_for(@user, {url: 'signup' }) do |f| %>
-  <%= f.text_field :name %>
-  <%= f.email_field :email %>
-  <%= f.password_field :password %>
-  <%= link_to "Login with Facebook", "/auth/facebook", class: "btn btn-primary" %>
-  <br>
-  <%= f.submit "SUBMIT" %>
-<% end %>
-</div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-lg-12">
+            <h1 id="title">CODEPREP</h1><img src=
+            "http://i22.photobucket.com/albums/b315/Doifreakuout14/Screen%20Shot%202016-05-16%20at%207.54.25%20PM.png">
+            <h1>SIGN UP</h1>
+            <div class="container-fluid">
+                <%= bootstrap_form_for(@user, {url: 'signup' }) do |f| %><%= f.text_field :name %><%= f.email_field :email %><%= f.password_field :password %><br>
 
+                <%= f.submit "SUBMIT" %> <%end %>
+            </div>
+        </div>
+    </div>
+</div>
+ 
