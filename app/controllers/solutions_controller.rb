@@ -35,7 +35,9 @@ class SolutionsController < ApplicationController
   end
 
   def show
-    @solution = Solution.includes(:user, :question, :rating, :comment).find({user: params[:user_id], question: params[:question_id]})
+    @solution = Solution.includes(:question).find_by_id params[:id]
+    @new_comment = Comment.new
+    @comments = Comment.includes(:user).find_by({solution_id: @solution.id})
   end
 
   def mysolutions
@@ -52,13 +54,13 @@ class SolutionsController < ApplicationController
   end
 
   def upvote
-  @solution.upvote_from current_user
-  redirect_to solutions_path
+    @solution.upvote_from current_user
+    redirect_to solutions_path
   end
 
   def downvote
-  @solution.downvote_from current_user
-  redirect_to solutions_path
+    @solution.downvote_from current_user
+    redirect_to solutions_path
   end
 
   private
