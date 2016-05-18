@@ -343,4 +343,10 @@ content: "What a great solution! You really seem to know your Javascript."})
 balanced_brakets_c3 = Comment.find_or_create_by({user_id: stevenSegal.id, question_id: balanced_brakets.id,
 content: "Have you thought about simplifying your solution?"})
 
+factors_c = Comment.find_or_create_by({user_id: kittyPurry.id, question_id: factors_q.id,
+content: "You're so cleaver!"})
+
+fibonacci_c = Comment.find_or_create_by({user_id: daJuiceMan.id, question_id: fibonacci_m,
+content: "I never would have thought to solve it this way. Good work!"})
+
 	
