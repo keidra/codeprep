@@ -1,5 +1,5 @@
 <%= render "partials/nav" %>
-
+<!-- <img src="http://i22.photobucket.com/albums/b315/Doifreakuout14/LOGO.png"> -->
 <div class="container-fluid">
 <div class="row">
 <div class="col-xs-6 col-sm-10 col-lg-12">
@@ -8,22 +8,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-lg-12">
-            <h1 id="title">CODEPREP</h1><img src=
-            "http://i22.photobucket.com/albums/b315/Doifreakuout14/LOGO.png">
-            <h1><%= @solution.question.id%> </h1>
-            <pre class="solutions"><strong>SOLUTIONS:</strong><br><br>
-            <br>
-            </pre>
-
+          <h1><%= @question.title%> </h1>
+            <pre><p><%= @question.content%></p></pre>
         </div>
     </div>
 </div>
 
-<% @comments.each do |comment|  %>
-    <h3><%= comment.user.name %></h3>
-    <p><%= comment.content %></p>
+    <h2 class="solutions"><strong>SOLUTIONS:</strong></h2>
+    <br>
+
+<h3><% @solutions.each do |solution|  %></h3>
+    <h4><%= solution.user.name %></h3>
+    <p><%= solution.content %></p>
     <% end %>
-    
+
 
 </div>
 </div>

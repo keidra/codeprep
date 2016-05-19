@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
 	  if(@solution_count === 0)
 	  	render plain: "No solutions with this question"
 		else
-			@solutions = Solution.find_by({question_id: @question.id})
+			@solutions = Solution.where({question_id: @question.id})
 			# render plain: @solution_count
 		end  	
   end
