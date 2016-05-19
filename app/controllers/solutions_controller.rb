@@ -40,7 +40,7 @@ class SolutionsController < ApplicationController
   end
 
   def show
-    @solution = Solution.includes(:question).find_by_id params[:id]
+    @solution = Solution.includes(:question).find_by_id params[:id].order(:cached_weighted_score => :desc)
     @new_comment = Comment.new
     @comment_count = Comment.where({solution_id: @solution.id}).count
 

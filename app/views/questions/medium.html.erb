@@ -1,13 +1,15 @@
 <%= render "partials/nav" %>
 
 <div class="container-fluid">
+<a class="hidden" id="difficulty" data="MEDIUM_STATE"></a>
  <h1>Problem:</h1>
             <h3><%= @question[0].content %></h3>
+            <div id="countdown"></div>
     <div class="row">
         <div class="col-xs-6 col-sm-10 col-lg-12">
             <div class="row">
            <%= bootstrap_form_for @solution do |t| %>
-              <%= t.text_area :content %>
+              <%= t.text_area :content, :class => 'medium_box' %>
               <%= t.primary %>
               <%= t.hidden_field :question_id, :value => @question[0].id %>
             <% end %>
