@@ -8,13 +8,13 @@ class UsersController < ApplicationController
   	# User.create new_user_params[:email], new_user_params[:password], new_user_params[:name]
   	@user = User.create new_user_params
 
-	  if @user
+	  if @user.valid?
 	    session[:user_id] = @user.id
 	    flash[:success] = "User logged in!!"
-	    redirect_to root_path
+	    redirect_to "/main"
 	  else
 	    flash[:danger] = "Credentials Invalid!!"
-	    redirect_to login_path
+	    redirect_to signup_path
 	  end
   end
 
