@@ -3,10 +3,12 @@
 <div class="container-fluid">
 <div class="row">
   <div class="col-xs-6 col-sm-10 col-lg-12">
+  <h1>MY SAVED SOLUTIONS</h1>
   <% @solutions.each do |solution|  %>
   <br>
-	<pre><strong>PROBLEM:</strong><br><br><%= solution.question.content %></pre>
-	<pre><strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
+	<pre class="solutions"><strong>PROBLEM:</strong><br><br><%= solution.question.content %>
+  <br>
+  <strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
   <button id="<%= solution.id %>" class="delete">DELETE</button>
 <% end %>
 </div>

@@ -21,19 +21,7 @@ body > div > div > div > h3:nth-child(1) {
     font-size: 1rem;
 }
 
-body > div.container-fluid > div > div > pre:nth-child(3) {
-    text-align: left;
-    padding-left: 80px;
-    font-family: monospace !important;
-    font-size: 0.8em;
-}
 
-body > div.container-fluid > div > div > pre:nth-child(4) {
-    text-align: left;
-    padding-left: 80px;
-    font-family: monospace !important;
-    font-size: 0.8em;
-}
 
 body > nav > div > a.brand-logo {
     color: black;
@@ -56,7 +44,6 @@ a:focus, a:hover {
 
 body > div.container-fluid {
     margin-top: 5px;
-    margin-left: 170px;
     width: 900px;
 }
 
@@ -103,6 +90,10 @@ body > div.container-fluid > div > div > div {
     background-color: transparent;
     color: black;
     height: 45px;
+    border: 1px solid #000;
+}
+
+body > div.container-fluid > div > div > form > input.btn.btn-primary {
     border: 1px solid #000;
 }
 
@@ -320,10 +311,11 @@ body > div.container-fluid > h3 {
 //MEDIUM PAGE
 
 
-//FOOTER
+//FOOTER - ABOUT
 
 body > div > footer {
     background-color: transparent !important;
+    text-align: center;
 }
 
 body > div.container-fluid > footer > div {
@@ -331,5 +323,26 @@ body > div.container-fluid > footer > div {
 }
 
 body > div.container-fluid > footer {
-    margin-top: 120px;
+    margin-top: 140px;
 }
+
+// FOOTER- MAIN - CHALLENGE
+
+body > footer {
+     background-color: transparent !important;
+     text-align: center;
+}
+
+body > footer > div {
+     background-color: transparent !important;
+}
+
+
+pre {
+    font-family: monospace, monospace !important;
+    font-size: 0.8em !important;
+    text-align: left;
+    word-wrap: break-word;
+    margin-left: 30px;
+}
+
