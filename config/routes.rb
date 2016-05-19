@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   get 'mysolutions' => 'solutions#mysolutions'
 
+  put 'solutions/:id' => 'solutions#update'
+
   # QUESTIONS
 
   get 'questions/easy' => 'questions#easy'
@@ -68,6 +70,13 @@ Rails.application.routes.draw do
     member do
       put "like", to: "solutions#upvote"
       put "dislike", to: "solutions#downvote"
+    end
+  end
+
+  resources :comments do
+    member do
+      put "like", to: "comments#upvote"
+      put "dislike", to: "comments#downvote"
     end
   end
 

@@ -1,9 +1,5 @@
 <%= render "partials/nav" %>
 
-
-
-
-
 <div class="container-fluid">
 <div class="row">
   <div class="col-xs-6 col-sm-10 col-lg-12">
@@ -12,6 +8,7 @@
 	<h3><%= solution.question.title %></h3>
 	<pre><strong>PROBLEM:</strong><br><br><%= solution.question.content %></pre>
 	<pre><strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
+  
   <div ><%= link_to like_solution_path(solution), method: :put do %>
     <button type="button" class="btn btn-info" aria-label="Left Align" >
       <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
@@ -27,6 +24,7 @@
     </button>
     </div>
   <% end %>
+  <button id="<%= solution.id %>" class="delete">DELETE</button>
 <% end %>
 </div>
 </div>
