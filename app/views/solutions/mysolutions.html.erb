@@ -3,30 +3,19 @@
 <div class="container-fluid">
 <div class="row">
   <div class="col-xs-6 col-sm-10 col-lg-12">
- <h3> Logged in as <%= @current_user.name %></h3>
-<% @solutions.each do |solution|  %>
-	<h3><%= solution.question.title %></h3>
-	<pre><strong>PROBLEM:</strong><br><br><%= solution.question.content %></pre>
-	<pre><strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
-  
-  <div ><%= link_to like_solution_path(solution), method: :put do %>
-    <button type="button" class="btn btn-info" aria-label="Left Align" >
-      <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
-      <span class="badge" style="margin-left: 15px;"><%= solution.get_upvotes.size  %></span>
-    </button>
-    <% end  %>
-    
 
-  <%= link_to dislike_solution_path(solution), method: :put do %>
-  <button type="button" class="btn btn-info" aria-label="Left Align" >
-      <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-      <span class="badge" style="margin-left: 15px;"><%= solution.get_downvotes.size  %></span>
-    </button>
-    </div>
-  <% end %>
+ <h3> Logged in as <%= @current_user.name %></h3>
+
+  <h1>MY SAVED SOLUTIONS</h1>
+  <% @solutions.each do |solution|  %>
+  <br>
+	<pre class="solutions"><strong>PROBLEM:</strong><br><br><%= solution.question.content %>
+  <br>
+  <strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
   <button id="<%= solution.id %>" class="delete">DELETE</button>
 <% end %>
 </div>
 </div>
 </div>
-</div>
+
+<%= render "partials/footer" %>

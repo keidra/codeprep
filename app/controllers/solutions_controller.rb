@@ -1,5 +1,5 @@
 class SolutionsController < ApplicationController
-  before_action :is_authenticated?, only: [:new, :create]
+  before_action :is_authenticated? #, only: [:new, :create]
   before_action :set_solution, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
   before_action :current_user
 

@@ -1,16 +1,28 @@
-    <nav>
-        <div class="nav-wrapper">
-            <ul class="right hide-on-med-and-down">
-                <!-- Dropdown Trigger -->
- <button class="btn waves-effect waves-light" type="submit" id="login">LOGIN
-  </button>
-            </ul>
-        </div>
-    </nav>
+<nav>
+    <div class="nav-wrapper">
+        <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <!-- <li style="list-style: none"><button class=
+            "btn waves-effect waves-light" id="login" type=
+            "submit">LOGIN</button></li> -->
+             <li style="list-style: none"><button class=
+            "btn waves-effect waves-light" data-target="#modal2" data-toggle=
+            "modal" id="login" type="submit">LOGIN</button></li>
+
+
+        </ul>
+        <ul class="left hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li style="list-style: none"><button class=
+            "btn waves-effect waves-light" data-target="#modal1" data-toggle=
+            "modal" id="login" type="submit">LEARN MORE</button></li>
+        </ul>
+    </div>
+</nav>         
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-6 col-sm-4 col-lg-12">
+        <div class="col-sm-8 col-md-10 col-lg-12">
             <h1 id="title">CODEPREP</h1><img src=
             "http://i22.photobucket.com/albums/b315/Doifreakuout14/LOGO.png">
             <h1>SIGN UP</h1>
@@ -21,4 +33,25 @@
         </div>
     </div>
 </div>
- 
+
+
+<div class="modal" id="modal1">
+    <div class="col-sm-8 col-md-10 col-lg-12">
+        <h4>ABOUT CODEPREP</h4>
+        <p>A bunch of text</p>
+        <h4>WHY SHOULD I SIGN UP?</h4>
+        <p>A bunch more text</p><button class="btn btn-default" data-dismiss=
+        "modal" type="button">Close</button>
+    </div>
+</div>
+<div class="modal" id="modal2">
+    <div class="col-sm-8 col-md-10 col-lg-12">
+        <h1>
+        LOGIN</h1><%= bootstrap_form_for :user do |f| %><%= f.email_field :email %><%= f.password_field :password %><%= f.primary 'Login' %><%end %><button class="btn btn-default"
+        data-dismiss="modal" type="button">Close</button>
+    </div>
+</div>
+
+
+<%= render "partials/footer" %>
+
