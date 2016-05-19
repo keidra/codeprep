@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 	before_action :is_authenticated?
+  before_action :set_comment, only: [:create, :destroy, :upvote, :downvote]
   before_action :current_user
 	
   def create
@@ -13,12 +14,19 @@ class CommentsController < ApplicationController
 
   def upvote
     @comment.upvote_from current_user
-    redirect_to solutions_path
+    redirect_to :back
   end
 
   def downvote
     @comment.downvote_from current_user
-    redirect_to solutions_path
+    redirect_to :back
   end
 
+
+  private
+
+  def set_comment
+    @comment = Comment.find(params[:id])
+    
+  end
 end

@@ -67,12 +67,12 @@ class SolutionsController < ApplicationController
 
   def upvote
     @solution.upvote_from current_user
-    redirect_to solutions_path
+    redirect_to :back
   end
 
   def downvote
     @solution.downvote_from current_user
-    redirect_to solutions_path
+    redirect_to :back
   end
 
   private
