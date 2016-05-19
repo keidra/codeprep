@@ -56,6 +56,14 @@
 <% @comments.each do |comment|  %>
     <h3><%= comment.user.name %></h3>
     <p><%= comment.content %></p>
+        <%= link_to like_comment_path(comment), method: :put do %>
+            <button class="btn waves-effect waves-light" id="up">UP
+            <span >(<%= comment.get_upvotes.size  %>)</span></button>
+        <% end  %>
+        <%= link_to dislike_comment_path(comment), method: :put do %>
+            <button class="btn waves-effect waves-light" id="down">DOWN
+            <span >(<%= comment.get_downvotes.size  %>)</span></button>
+        <% end %>
     <% end %>
 </div>
 </div>
