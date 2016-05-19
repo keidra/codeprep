@@ -26,12 +26,14 @@ Installation Instructions //
 
 
 Unsolved Problems //
-Facebook Oauth in addition to a regular user login. Hannah coded the Facebook Oauth while Keidra worked on the general user login. At this time we realized that having both types of login options had the problematic potential for user_id conflicts and would require either a joined table for both users (where columns such as provider_id would be nill for non-facebook users). In the end, we decided to save this as a stretch goal.
+1. Facebook Oauth in addition to a regular user login. Hannah coded the Facebook Oauth while Keidra worked on the general user login. At this time we realized that having both types of login options had the problematic potential for user_id conflicts and would require either a joined table for both users (where columns such as provider_id would be nill for non-facebook users). In the end, we decided to save this as a stretch goal.
+2. Another big error that we experienced is with the "bootstrap_form_for" which caused a route error when trying to create a new comment.Turns out the form_for will not set abolute path, instead it only follows its (comment) controller. We hacked it by altering the routes.db path to "/solutions/comments/create"; essentially setting up the comments in routes instead of forms. 
+
 
 User Stories //
 
 1. The Main user is Stan DaMan who is a new developer looking to prepare for his first tech interviews with whiteboard practice. He is equally excited for the stress simulation (with the countdown clock) and peer review / ability to see how fellow programmers approached the same problem to learn new strategies. 
-2. with the bootstrap form for, it will not set abolute apth, instead it only follows its controller. We hacked it by altering the routes.db path to "/solutions/comments/create". Basically we set it up in routes instead of forms. 
-
+2. The secondary user is an experienced programmer who wants to help provide tips and insights to the public solutions as well as gain insight to the types of questions programmers are expecting in interviews. 
+3. The final user would likely be any hiring manager or recruiter who is looking for a new up and coming programmer. They could look at the community forum for solutions to see who is frequently posting, helping and commenting on others' solutions. The
 
 
