@@ -83,9 +83,9 @@ Rails.application.routes.draw do
 
 #START CHALLENGE
 
-  get 'main' => 'main#index'
+  # get 'main' => 'main#index'
 
-  root 'users#new'
+  root 'main#index'
 
   #ABOUT PAGE
 
