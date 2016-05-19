@@ -86,6 +86,7 @@ body > div.container-fluid > div > div > div {
     color: black;
     height: 45px;
     margin-right: 10px;
+    border: 1px solid #000;
 }
 
 #medium {
@@ -94,6 +95,7 @@ body > div.container-fluid > div > div > div {
     color: black;
     height: 45px;
     margin-right: 10px;
+    border: 1px solid #000;
 }
 
 #hard {
@@ -101,6 +103,7 @@ body > div.container-fluid > div > div > div {
     background-color: transparent;
     color: black;
     height: 45px;
+    border: 1px solid #000;
 }
 
 .btn-group-vertical>.btn:first-child:not(:last-child) {
