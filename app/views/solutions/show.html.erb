@@ -39,10 +39,15 @@
 
  <h3> Solution For: <%= @solution.question.title %></h3>
  <pre><%= @solution.content %></pre>
-
+    <div class="well">
+    <button id="add_comment" class="add">ADD</button>
+    <p></p>
+    </div>
 <% @comments.each do |comment|  %>
     <h3><%= comment.user.name %></h3>
     <p><%= comment.content %></p>
+
+   
 <% end %>
 </div>
 </div>
