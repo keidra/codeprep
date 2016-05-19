@@ -13,6 +13,19 @@
   <br>
   <strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
   <button id="<%= solution.id %>" class="delete">DELETE</button>
+  <button class="btn waves-effect waves-light" data-target="#modal<%= solution.id %>" data-toggle="modal" >EDIT</button>
+
+   <div id="modal<%= solution.id %>" class="modal">
+ <div class="col-sm-8 col-md-10 col-lg-12">
+      <%= bootstrap_form_for solution do |t| %>
+              <%= t.text_area :content %>
+              <%= t.primary %>
+              <%= t.hidden_field :question_id %>
+            <% end %>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+  </div>
+  </div>
+
 <% end %>
 </div>
 </div>
