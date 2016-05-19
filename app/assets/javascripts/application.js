@@ -60,9 +60,13 @@
         })
     })
 
-    
+    $('#up').click(function () {
+  $(this).toggleClass('on');
+    });
 
-    
+     $('#down').click(function () {
+  $(this).toggleClass('on');
+    });
 
 
  });
