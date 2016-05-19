@@ -106,11 +106,11 @@ function executeState() {
   if (CURRENT_STATE === "NO_STATE") {
 
   } else if (CURRENT_STATE === "EASY_STATE") {
-    countdown( "countdown", 0, 30 );
+    countdown( "countdown", 5, 00 );
   } else if (CURRENT_STATE === "MEDIUM_STATE") {
-
+    countdown( "countdown", 10, 00 );
   } else if (CURRENT_STATE === "HARD_STATE") {
-
+    countdown( "countdown", 15, 00 );
   }
 
 }
@@ -132,6 +132,8 @@ function executeState() {
         if ( msLeft < 1000 ) {
             element.innerHTML = "countdown's over!";
             $('.easy_box').prop('disabled',true);
+            $('.medium_box').prop('disabled',true);
+            $('.hard_box').prop('disabled',true);
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
