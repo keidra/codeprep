@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
 	  if(@solution_count === 0)
 	  	render plain: "No solutions with this question"
 		else
-			@solutions = Solution.where({question_id: @question.id})
+			@solutions = Solution.where({question_id: @question.id}).order(:cached_votes_score => :desc)
 			# render plain: @solution_count
 		end  	
   end
