@@ -17,10 +17,12 @@
 //= require jquery 
 //= require materialize-sprockets 
 
+
+// NAV BAR
  $( document ).ready(function(){
    $(".button-collapse").sideNav();
 
-
+// CHALLENGE BUTTONS
      $('#easy').click(function() {
     window.location.href = 'questions/easy';
     return false;
@@ -37,10 +39,13 @@
     return false;
  });
 
+// LOGIN 
  //        $('#login').click(function() {
  //    window.location.href = '/login';
  //    return false;
  // });
+
+// DELETE BUTTON FOR MY SAVED SOLUTIONS
 
     $('.delete').click(function(e){
         // url: 'solutions/:id'
@@ -60,6 +65,8 @@
         })
     })
 
+// VOTING BUTTONS
+
     $('#up').click(function () {
   $(this).toggleClass('on');
     });
@@ -68,7 +75,7 @@
   $(this).toggleClass('on');
     });
 
-
+// FLASH ALERTS
 $(function() {
   setTimeout(function(){
     $('.alert').slideUp(500);
