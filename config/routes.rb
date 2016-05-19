@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # put 'solutions/:id/dislike' => 'rating#create'
 
 # COMMENTS
-  post 'comments/create' => 'comments#create'
+  post 'solutions/comments/create' => 'comments#create'
 
   delete 'comments/destroy' => 'comments#destroy'
 

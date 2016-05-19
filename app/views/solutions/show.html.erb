@@ -42,11 +42,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-lg-12">
-        <pre class="solutions"><strong>ADD COMMENT:</strong><br><br>
-        <br>
-        </pre>
-       <button id="add_comment" class="add">+</button>
-       
+       <%= bootstrap_form_for(@new_comment, {url: 'comments/create'}) do |t| %>
+              <%= t.text_area :content, label: "Leave a comment here:" %>
+              <%= t.primary %>
+              <%= t.hidden_field :solution_id, :value => @solution.id%>
+            <% end %>
         </div>
     </div>
 </div>
