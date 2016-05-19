@@ -319,3 +319,17 @@ body > div.container-fluid > h3 {
 
 //MEDIUM PAGE
 
+
+//FOOTER
+
+body > div > footer {
+    background-color: transparent !important;
+}
+
+body > div.container-fluid > footer > div {
+    background-color: transparent !important;
+}
+
+body > div.container-fluid > footer {
+    margin-top: 120px;
+}
