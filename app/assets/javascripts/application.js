@@ -22,28 +22,28 @@
  $( document ).ready(function(){
    $(".button-collapse").sideNav();
 
-// CHALLENGE BUTTONS
-     $('#easy').click(function() {
-    window.location.href = 'questions/easy';
-    return false;
- });
+// // CHALLENGE BUTTONS
+//      $('#easy').click(function() {
+//     window.location.href = 'questions/easy';
+//     return false;
+//  });
 
-    $('#medium').click(function() {
-    window.location.href = 'questions/medium';
-    return false;
- });
+//     $('#medium').click(function() {
+//     window.location.href = 'questions/medium';
+//     return false;
+//  });
 
 
-       $('#hard').click(function() {
-    window.location.href = 'questions/hard';
-    return false;
- });
+//        $('#hard').click(function() {
+//     window.location.href = 'questions/hard';
+//     return false;
+//  });
 
-//LOGIN 
-        $('#login').click(function() {
-    window.location.href = '/login';
-    return false;
- });
+// //LOGIN 
+//         $('#login').click(function() {
+//     window.location.href = '/login';
+//     return false;
+//  });
 
 // DELETE BUTTON FOR MY SAVED SOLUTIONS
 
