@@ -19,6 +19,8 @@ class SolutionsController < ApplicationController
 
   def destroy
     Solution.find(params[:id]).delete
+    # render :status => :ok 
+    render :nothing => true, :status => 200, :content_type => 'text/html'
   end
 
   def create

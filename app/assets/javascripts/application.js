@@ -44,11 +44,20 @@
 
     $('.delete').click(function(e){
         // url: 'solutions/:id'
-        var elem = $(this).parent();
-        var value = elem.attr('value');
-        console.log(value);
-
-
+        // var elem = $(this).parent();
+        var elem = $(this); 
+        var id = elem.attr('id');
+        console.log(id);
+        var url = '/solutions/' + id ;
+        $.ajax({
+            url: url,
+            method: 'DELETE'
+            // ,
+            // success: function(){
+            //     parent.remove();
+        }).always(function(){
+            location.reload()
+        })
     })
 
     
