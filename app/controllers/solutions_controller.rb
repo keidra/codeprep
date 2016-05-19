@@ -53,7 +53,13 @@ class SolutionsController < ApplicationController
   end
 
   def mysolutions
-    @solutions = Solution.includes(:question).where({user_id: @current_user.id})
+    @solutions_count = Solution.where({user_id: @current_user.id}).count
+
+    if(@solutions_count === 0)
+      @solutions = []
+    else
+      @solutions = Solution.includes(:question).where({user_id: @current_user.id})
+    end
 
     #@questions = []
 

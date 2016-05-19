@@ -17,12 +17,13 @@ class QuestionsController < ApplicationController
   def easy
   	@solution = Solution.new
   	@tag = Tag.find_by({name:"easy"})
-	  solution_count = Solution.count({user_id: @current_user.id})
+	  @solution_count = Solution.where({user_id: @current_user.id}).count
+	  puts "debug @solution_count " + @solution_count.to_s
 
-	  if(solution_count === 0)
+	  if(@solution_count === 0)
 	  	@question = @tag.questions.limit(1).order("RANDOM()")
 		else
-			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
+			@answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
 			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
 		end
 
@@ -32,9 +33,9 @@ class QuestionsController < ApplicationController
   def medium
   	@solution = Solution.new
   	@tag = Tag.find_by({name:"medium"})
-	  solution_count = Solution.count({user_id: @current_user.id})
+	  @solution_count = Solution.where({user_id: @current_user.id}).count
 
-	  if(solution_count === 0)
+	  if(@solution_count === 0)
 	  	@question = @tag.questions.limit(1).order("RANDOM()")
 		else
 			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
@@ -47,9 +48,9 @@ class QuestionsController < ApplicationController
   def hard
   	@solution = Solution.new
   	@tag = Tag.find_by({name:"hard"})
-	  solution_count = Solution.count({user_id: @current_user.id})
+	  @solution_count = Solution.where({user_id: @current_user.id}).count
 
-	  if(solution_count === 0)
+	  if(@solution_count === 0)
 	  	@question = @tag.questions.limit(1).order("RANDOM()")
 		else
 			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
