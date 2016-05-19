@@ -27,5 +27,5 @@ class AddCachedVotesToComments < ActiveRecord::Migration
     remove_column :comments, :cached_weighted_score
     remove_column :comments, :cached_weighted_total
     remove_column :comments, :cached_weighted_average
-comments
+  end 
 end
