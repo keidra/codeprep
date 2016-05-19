@@ -37,10 +37,10 @@
     return false;
  });
 
-        $('#login').click(function() {
-    window.location.href = '/login';
-    return false;
- });
+ //        $('#login').click(function() {
+ //    window.location.href = '/login';
+ //    return false;
+ // });
 
     $('.delete').click(function(e){
         // url: 'solutions/:id'

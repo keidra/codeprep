@@ -21,7 +21,9 @@ body > div > div > div > h3:nth-child(1) {
     font-size: 1rem;
 }
 
-
+body > nav {
+    margin-top: 10px;
+}
 
 body > nav > div > a.brand-logo {
     color: black;
@@ -29,7 +31,7 @@ body > nav > div > a.brand-logo {
     text-decoration: none;
 }
 body > nav > div > ul > li {
-    margin-right: 30px;
+   
     font-size: 30px;
 }
 
@@ -91,6 +93,10 @@ body > div.container-fluid > div > div > div {
     color: black;
     height: 45px;
     border: 1px solid #000;
+}
+
+body > nav > div > ul.left.hide-on-med-and-down {
+    margin-left: 30px;
 }
 
 body > div.container-fluid > div > div > form > input.btn.btn-primary {
@@ -350,3 +356,14 @@ pre {
     margin-left: 30px;
 }
 
+//MODAL
+
+#modal1 > div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#modal2 > div {
+    text-align: center;
+    margin-top: 20px;
+}
