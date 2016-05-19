@@ -1,11 +1,12 @@
 class CommentsController < ApplicationController
 	before_action :is_authenticated?
-  before_action :set_comment, only: [:create, :destroy, :upvote, :downvote]
+  before_action :set_comment, only: [:destroy, :upvote, :downvote]
   before_action :current_user
 
   def create
   	@comment = @current_user.comment.create comment_params
-  	render :json => @comment
+  	# render :json => @comment
+    redirect_to :back
   end
 
   def destroy
@@ -29,4 +30,10 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     
   end
+
+  def comment_params
+    params.require(:comment).permit(:content, :solution_id)
+    
+  end
+
 end
