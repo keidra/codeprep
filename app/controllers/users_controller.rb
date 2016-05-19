@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 	  if @user.valid?
 	    session[:user_id] = @user.id
 	    flash[:success] = "User logged in!!"
-	    redirect_to "/main"
+	    redirect_to "/"
 	  else
 	    flash[:danger] = "Credentials Invalid!!"
 	    redirect_to signup_path
