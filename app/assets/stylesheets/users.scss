@@ -111,6 +111,10 @@ body > div.container-fluid > div > div > form > input.btn.btn-primary {
     border-bottom-left-radius: 0;
 }
 
+#new_user > input.btn.btn-default {
+    border: 1px solid #000;
+}
+
 body > div.container-fluid > div > div > div > button:nth-child(1) {
     margin-right: 15px;
     width: 143px;
