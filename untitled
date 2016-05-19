@@ -31,7 +31,7 @@ Facebook Oauth in addition to a regular user login. Hannah coded the Facebook Oa
 User Stories //
 
 1. The Main user is Stan DaMan who is a new developer looking to prepare for his first tech interviews with whiteboard practice. He is equally excited for the stress simulation (with the countdown clock) and peer review / ability to see how fellow programmers approached the same problem to learn new strategies. 
-2. with the bootstrap form for, it will not set abolute apth, instead it only follows its controller. We hacked it by altering the routes.db path to "/solutions/comments/create". Basically we set it up in routes instead of forms. 
+2. 
 
 
 
