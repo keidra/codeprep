@@ -39,10 +39,15 @@
 
  <h3> Solution For: <%= @solution.question.title %></h3>
  <pre><%= @solution.content %></pre>
-
+    <div class="well">
+    <button id="add_comment" class="add">ADD</button>
+    <p></p>
+    </div>
+    
 <% @comments.each do |comment|  %>
     <h3><%= comment.user.name %></h3>
     <p><%= comment.content %></p>
+
     <div ><%= link_to like_comment_path(comment), method: :put do %>
     <button type="button" class="btn btn-info" aria-label="Left Align" >
       <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
@@ -57,8 +62,12 @@
       <span class="badge" style="margin-left: 15px;"><%= comment.get_downvotes.size  %></span>
     </button>
     </div>
-  <% end %>
+    <% end %>
+
+
+
 <% end %>
+
 </div>
 </div>
 </div>
