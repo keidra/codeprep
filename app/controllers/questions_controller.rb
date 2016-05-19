@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
 	  	@question = @tag.questions.limit(1).order("RANDOM()")
 		else
 			@answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
-			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
+			@question = @tag.questions.where.not(id: @answered_question_ids).limit(1).order("RANDOM()")
 		end
 
 		# render plain: @question[0].content
@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
 	  	@question = @tag.questions.limit(1).order("RANDOM()")
 		else
 			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
-			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
+			@question = @tag.questions.where.not(id: @answered_question_ids).limit(1).order("RANDOM()")
 		end
 
 		# render plain: @question[0].content
@@ -54,7 +54,7 @@ class QuestionsController < ApplicationController
 	  	@question = @tag.questions.limit(1).order("RANDOM()")
 		else
 			answered_question_ids = Solution.find_by({user_id: @current_user.id}).question_id
-			@question = @tag.questions.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
+			@question = @tag.questions.where.not(id: @answered_question_ids).limit(1).order("RANDOM()")
 		end
 
 		# render plain: @question[0].content
