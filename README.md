@@ -1,60 +1,37 @@
-# project3
+CODEPREP | Project 3 | Josh Brian Keidra Hannah
+HEROKU: https://code-prep.herokuapp.com/
+WIREFRAME: https://goo.gl/Q84wxi
+Technologies Used //
 
-#### RUN BUNDLE INSTALL ###
-make sure you have " gem 'acts_as_votable' "  IN YOUR GEMFILE
+For this project, we utilized HTML, CSS, jQuery/AJAX, Ruby, Ruby on Rails, postgresql (database), Forman, bootstrap, ‘email_validator’ (gem), 'acts_as_votable' (gem), bcrypt,  'rails_12factor'( Gem for Heroku deployment) and Materialize.
 
-#Finding a new random question that hasn't been answered:
+Approach Taken //
+We began our project by first conceptualizing the user experience. From there we were able collectively draw our primitive wireframes which Keidra then implemented via Balsamic. From there we created the skeleton of the app; Josh created the necessary controllers and models. 
+ 
+After the basic functionality, we started working on the views pages where Keidra (our front-end specialist) set up the visuals for most pages as well as formatting. At the same time, Josh (our backend specialist) worked on the routes and controllers to make sure that all the methods were properly in place as well. Getting our MVP functionality of authentication (see unsolved problems below) as well as basic routes up took the majority of our time as well as seeding the database with users, solutions, and comments (Hannah). 
 
-##First define a current user and a difficulty
+Brian, who is a full-stack developer, largely worked on the Countdown plugin as well as the ratings gem for comments which required a lot of documentation review and polymorphic understanding. This as well as other functionalities (skip buttons, content becoming non-editable after the countdown reaches 0, users unable to access questions or solutions without logging in) became the action items the group focused on post deployment to Heroku on Wednesday afternoon. 
 
-@currentUser = User.find_by_id(session[:user_id])
-@tag = Tag.find params[:name]
+Installation Instructions //
+1. Login 
+2. Click the difficulty level (easy, medium, hard) for your first whiteboard question
+3. In the form, type your solution to the problem before the timer runs out
+4. Click on the submit button to submit your solution to the peer review
+5. You will be redirected to the question page where you can see the question will all existing questions.
+6. You are able to click into any individual solutions where a modal will pop up where you can like, down-like or comment on that solution.
+7. You can view your current solutions by clicking the “My Solved” menu option from the upper right drop-down. 
+8. Within your “My Solved” page, you can delete or edit any of your existing solutions. 
+9. You can start a new question by selecting the “Questions” option from the menu.
+10. You can log-out at anytime, knowing your valuable solutions are saved and ready for your next visit. 
 
-##Figure out how many solutions the current user has
 
-solution_count = Solution.count({user_id: @currentUser.id})
+Unsolved Problems //
+Facebook Oauth in addition to a regular user login. Hannah coded the Facebook Oauth while Keidra worked on the general user login. At this time we realized that having both types of login options had the problematic potential for user_id conflicts and would require either a joined table for both users (where columns such as provider_id would be nill for non-facebook users). In the end, we decided to save this as a stretch goal.
 
-##If the user has no solutions yet (solution_count === 0)
-##Just grab a random question
+User Stories //
 
-@question = @tag.questions.limit(1).order("RANDOM()")
+1. The Main user is Stan DaMan who is a new developer looking to prepare for his first tech interviews with whiteboard practice. He is equally excited for the stress simulation (with the countdown clock) and peer review / ability to see how fellow programmers approached the same problem to learn new strategies. 
+2. with the bootstrap form for, it will not set abolute apth, instead it only follows its controller. We hacked it by altering the routes.db path to "/solutions/comments/create". Basically we set it up in routes instead of forms. 
 
-##If the user has 1 solution (solution_count === 1)
-##Grab a random question that isn't the answered question
 
-answered_question_id = Solution.find_by({user_id: @currentUser.id}).question_id
-@question = @tag.questions.where.not(id: answered_question_id).limit(1).order("RANDOM()")
 
-##If the user has more than 1 solution (solution_count > 1)
-##Grab a random question based on an array
-
-answered_question_ids = Solution.find_by({user_id: @currentUser.id}).question_id
-@question = @tag.question.where.not(id: answered_question_ids).limit(1).order("RANDOM()")
-
-#Displaying Answers to a question
-
-##Given a known question ID and user
-
-@currentUser = User.find_by_id(session[:user_id])
-@question = Question.find params[:id]
-
-##Grab the user's solution first then grab all others
-
-@user_solution = Solution.find_by({user_id:currentUser.id, question_id:@question.id})
-
-@solutions = Solution.find_by({question_id:@question.id}).where.not({user_id:currentUser.id})
-
-##... have to figure out ratings and comments
-
-@ratings_count = []
-@comments_count = []
-
-@solutions.each do |solution|
-	@ratings_count << Rating.count({solution_id: solution.id})
-	@comment_count << Comment.count({solution_id: solution.id})
-end
-
-# Showing a solution and each of it's comments
-
-@solution = Solution.find_by_id(params[:id])
-@comments = Comment.find_by(solution_id:params[:id])
