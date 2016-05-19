@@ -1,23 +1,32 @@
 <%= render "partials/nav" %>
 
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-6 col-sm-10 col-lg-12">
+ <h3> Logged in as <%= @current_user.name %></h3>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-lg-12">
             <h1 id="title">CODEPREP</h1><img src=
             "http://i22.photobucket.com/albums/b315/Doifreakuout14/LOGO.png">
-            <h1>PROBLEM #1: </h1>
-
+            <h1><%= @solution.question.id%> </h1>
             <pre class="solutions"><strong>SOLUTIONS:</strong><br><br>
             <br>
             </pre>
-       
-     
-        <button class="btn waves-effect waves-light" id="up">UP</button>
-           <button class="btn waves-effect waves-light" id="down">DOWN</button>
 
         </div>
     </div>
+</div>
+
+<% @comments.each do |comment|  %>
+    <h3><%= comment.user.name %></h3>
+    <p><%= comment.content %></p>
+    <% end %>
+    
+
+</div>
+</div>
 </div>
 
 
