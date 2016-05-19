@@ -20,7 +20,7 @@
 
 <h3><% @solutions.each do |solution|  %></h3>
     <h4><%= solution.user.name %></h3>
-    <p><%= solution.content %></p>
+    <a href="/solutions/<%= solution.id %>"><p><%= solution.content %></p></a>
         <%= link_to like_solution_path(solution), method: :put do %>
             <button class="btn waves-effect waves-light" id="up">UP
             <span >(<%= solution.get_upvotes.size  %>)</span></button>
