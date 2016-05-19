@@ -19,70 +19,56 @@
 
 
 // NAV BAR
- $( document ).ready(function(){
-   $(".button-collapse").sideNav();
-
-// CHALLENGE BUTTONS
-     $('#easy').click(function() {
-    window.location.href = 'questions/easy';
-    return false;
- });
-
+$(document).ready(function() {
+    $(".button-collapse").sideNav();
+    // CHALLENGE BUTTONS
+    $('#easy').click(function() {
+        window.location.href = 'questions/easy';
+        return false;
+    });
     $('#medium').click(function() {
-    window.location.href = 'questions/medium';
-    return false;
- });
-
-
-       $('#hard').click(function() {
-    window.location.href = 'questions/hard';
-    return false;
- });
-
-// LOGIN 
- //        $('#login').click(function() {
- //    window.location.href = '/login';
- //    return false;
- // });
-
-// DELETE BUTTON FOR MY SAVED SOLUTIONS
-
-    $('.delete').click(function(e){
-        // url: 'solutions/:id'
-        // var elem = $(this).parent();
-        var elem = $(this); 
-        var id = elem.attr('id');
-        console.log(id);
-        var url = '/solutions/' + id ;
-        $.ajax({
-            url: url,
-            method: 'DELETE'
-            // ,
-            // success: function(){
-            //     parent.remove();
-        }).always(function(){
-            location.reload()
+        window.location.href = 'questions/medium';
+        return false;
+    });
+    $('#hard').click(function() {
+        window.location.href = 'questions/hard';
+        return false;
+    });
+    // LOGIN 
+    //        $('#login').click(function() {
+    //    window.location.href = '/login';
+    //    return false;
+    // });
+    // DELETE BUTTON FOR MY SAVED SOLUTIONS
+    $('.delete').click(function(e) {
+            // url: 'solutions/:id'
+            // var elem = $(this).parent();
+            var elem = $(this);
+            var id = elem.attr('id');
+            console.log(id);
+            var url = '/solutions/' + id;
+            $.ajax({
+                url: url,
+                method: 'DELETE'
+                    // ,
+                    // success: function(){
+                    //     parent.remove();
+            }).always(function() {
+                location.reload()
+            })
         })
-    })
-
-// VOTING BUTTONS
-
-    $('#up').click(function () {
-  $(this).toggleClass('on');
+        // VOTING BUTTONS
+    $('#up').click(function() {
+        $(this).toggleClass('on');
     });
-
-     $('#down').click(function () {
-  $(this).toggleClass('on');
+    $('#down').click(function() {
+        $(this).toggleClass('on');
     });
-
-// FLASH ALERTS
-$(function() {
-  setTimeout(function(){
-    $('.alert').slideUp(500);
-  }, 1000);
+    // FLASH ALERTS
+    $(function() {
+        setTimeout(function() {
+            $('.alert').slideUp(500);
+        }, 1000);
+    });
 });
-
-
- });
-
 
