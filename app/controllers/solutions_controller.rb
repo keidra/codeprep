@@ -54,7 +54,7 @@ class SolutionsController < ApplicationController
 
   def mysolutions
     @solutions_count = Solution.where({user_id: @current_user.id}).count
-
+    
     if(@solutions_count === 0)
       @solutions = []
     else
