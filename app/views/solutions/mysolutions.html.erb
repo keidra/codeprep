@@ -11,7 +11,7 @@
   <br>
 	<pre class="solutions"><strong>PROBLEM:</strong><br><br><%= solution.question.content %>
   <br>
-  <strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
+  <strong><a href="/questions/<%= solution.question_id %>">SOLUTION:</a></strong><br><br><%= solution.content %></pre>
   <button id="<%= solution.id %>" class="delete">DELETE</button>
   <button class="btn waves-effect waves-light" data-target="#modal<%= solution.id %>" data-toggle="modal" >EDIT</button>
 
