@@ -356,6 +356,14 @@ pre {
     margin-left: 30px;
 }
 
+body > div.container-fluid > div.container-fluid > div > footer {
+    background-color: transparent;
+}
+
+body > div.container-fluid > div.container-fluid > div > footer > div {
+     background-color: transparent;
+}
+
 //MODAL
 
 #modal1 > div {
@@ -367,4 +375,42 @@ pre {
     text-align: center;
     margin-top: 20px;
     display: inline;
+}
+
+
+#new_solution > input.btn.btn-primary {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #000;
+}
+
+#new_solution > div > label {
+    font-size: 20px;
+    float: left;
+}
+
+#countdown {
+    font-size: 70px;
+    margin-top: 50px;
+    font-weight: bold !important;
+}
+
+body > nav > div > ul > li {
+    font-size: 20px;
+    margin-left: 542px;
+    margin-top: -34px;
+}
+
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
 }
