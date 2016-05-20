@@ -146,7 +146,7 @@ $(document).on('page:load', function() {
         {
             msLeft = endTime - (+new Date);
             if ( msLeft < 1000 ) {
-                element.innerHTML = "countdown's over!";
+                element.innerHTML = "Time is up!";
                 $('.easy_box').prop('readonly',true);
                 $('.medium_box').prop('readonly',true);
                 $('.hard_box').prop('readonly',true);
