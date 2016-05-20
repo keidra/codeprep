@@ -26,18 +26,18 @@
  //            return false;
  //        });
          // SKIP
-        $('#skip').click(function() {
-            window.location.href = '/questions/easy';
-            return false;
-        });
-        $('#skip2').click(function() {
-            window.location.href = '/questions/medium';
-            return false;
-        });
-        $('#skip3').click(function() {
-            window.location.href = '/questions/hard';
-            return false;
-        });
+        // $('#skip').click(function() {
+        //     window.location.href = '/questions/easy';
+        //     return false;
+        // });
+        // $('#skip2').click(function() {
+        //     window.location.href = '/questions/medium';
+        //     return false;
+        // });
+        // $('#skip3').click(function() {
+        //     window.location.href = '/questions/hard';
+        //     return false;
+        // });
 
 
 
