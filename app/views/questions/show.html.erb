@@ -1,4 +1,5 @@
 <%= render "partials/nav" %>
+
 <div class="container-fluid">
 <div class="row">
 <div class="col-xs-6 col-sm-10 col-lg-12">
@@ -7,20 +8,33 @@
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-lg-12">
         <h2 class="solutions">ALL SOLUTIONS FOR:</h2>
-          <h1><%= @question.title%> </h1>
-            <pre><p><%= @question.content%></p></pre>
+         
+            <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card-panel">
+         <h1><%= @question.title%> </h1>
+          <span>
+          <%= @question.content%>
+          </span>
+        </div>
+      </div>
+    </div>
         
         </div>
     </div>
 </div>
 
-    <h2 class="solutions"><strong>SOLUTIONS:</strong></h2>
-    <br>
 
-<h3><% @solutions.each do |solution|  %></h3>
-    <h4><%= solution.user.name %></h3>
-    <a href="/solutions/<%= solution.id %>"><p><%= solution.content %></p></a>
-        <%= link_to like_solution_path(solution), method: :put do %>
+
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <span>
+          <h3><% @solutions.each do |solution|  %></h3>
+            <h4>SOLUTION BY - <%= solution.user.name %></h3>
+          <a href="/solutions/<%= solution.id %>"><p><%= solution.content %></p></a>
+          </span>
+            <%= link_to like_solution_path(solution), method: :put do %>
             <button class="btn waves-effect waves-light" id="up">UP
             <span >(<%= solution.get_upvotes.size  %>)</span></button>
         <% end  %>
@@ -32,6 +46,9 @@
             <span >(<%= @comment_counts[solution.id] %>)</span></a>
     <% end %>
 
+        </div>
+      </div>
+    </div>
     
 </div>
 </div>
