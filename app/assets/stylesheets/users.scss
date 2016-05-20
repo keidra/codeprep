@@ -597,3 +597,37 @@ body > nav > div > ul > li {
         margin-left: 1127px;
     margin-top: -30px;
 }
+
+nav ul.nav-wrapper {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+// ABOUT
+
+body > div > div.row > div > p:nth-child(3) {
+    font-size: 1.2em;
+}
+
+body > div > div.row > div > p:nth-child(4) {
+    font-size: 1.2em;
+}
+
+body > div > div.row > div > p:nth-child(5) {
+    font-size: 1.2em;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #26a69a;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-top: 50px;
+}

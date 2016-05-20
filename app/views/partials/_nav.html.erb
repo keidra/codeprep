@@ -1,22 +1,29 @@
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="/">HOME</a></li>
-  <li><a href="/">QUESTIONS</a></li>
-  <li><a href="/mysolutions" class="testClass">MY SOLVED</a></li>
-  <li><a href="/about" class="testClass">ABOUT</a></li>
-  <li><a href="/logout" class="testClass">LOGOUT</a></li>
-</ul>
 <nav>
-  <div class="nav-wrapper">
-    <a href="/" class="brand-logo">CODEPREP</a>
-    <ul class="right ">
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" data-activates="dropdown1"><i class="material-icons">MENU</i></a></li>
-    </ul>
-
-  </div>
+    <div class="nav-wrapper">
+        <a class="brand-logo" href="/">CODEPREP</a>
+        <ul class="right">
+            <!-- Dropdown Trigger -->
+            <li>
+                <a class="dropdown-button" data-activates="dropdown1"><i class=
+                "material-icons">MENU</i></a>
+            </li>
+        </ul>
+    </div>
 </nav>
-         
-        
-
-
-        
+<ul class="dropdown-content" id="dropdown1">
+    <li>
+        <a href="/">HOME</a>
+    </li>
+    <li>
+        <a href="/">QUESTIONS</a>
+    </li>
+    <li>
+        <a class="testClass" href="/mysolutions">SAVED</a>
+    </li>
+    <li>
+        <a class="testClass" href="/about">ABOUT</a>
+    </li>
+    <li>
+        <a class="testClass" href="/logout">LOGOUT</a>
+    </li>
+</ul>
