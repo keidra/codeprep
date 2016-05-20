@@ -29,9 +29,11 @@
             <button class="btn waves-effect waves-light" id="down">DOWN
             <span >(<%= solution.get_downvotes.size  %>)</span></button>
         <% end %>
+            <a class="btn waves-effect waves-light" id="down" href="/solutions/<%= solution.id %>">COMMENTS
+            <span >(<%= @comment_counts[solution.id] %>)</span></a>
     <% end %>
 
-
+    
 </div>
 </div>
 </div>

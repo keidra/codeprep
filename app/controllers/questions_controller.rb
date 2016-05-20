@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   def show
   	@question = Question.find_by_id params[:id]
   	@solution_count = Solution.where({question_id: @question.id}).count
+  	@comment_counts = Comment.count(:group => :solution_id)
 
 	  if(@solution_count === 0)
 	  	render plain: "No solutions with this question"
