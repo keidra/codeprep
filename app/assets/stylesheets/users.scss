@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 @import "materialize";
 
 $color-primary : white;
@@ -413,4 +414,91 @@ nav ul a {
 
 textarea {
     resize: none;
+}
+
+#new_comment > input.btn.btn-primary {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #000;
+}
+
+#up {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #000;
+}
+
+
+#down{
+ background-color: transparent;
+    color: black;
+    border: 1px solid #000;
+}
+
+#btn waves-effect waves-light delete {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #000;
+}
+
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    transition: all .3s ease-out;
+    background-color: transparent !important;
+    color: black !important;
+    border: 1px solid #000 !important;
+}
+
+
+pre {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+body > div.container-fluid > div > div > div:nth-child(3) > div > div > span > strong:nth-child(5) {
+    font-weight: bold !important;
+}
+
+.card-panel {
+    transition: box-shadow .25s;
+    padding: 20px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+    text-align: left;
+}
+
+
+body > div.container-fluid > div > div > div > div > div > div > div > div > h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: -10px;
+}
+
+body > div.container-fluid > div > div > div > div > div > div > div > div > span {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+body > div.container-fluid > div > div > div.row > div > div {
+    transition: box-shadow .25s;
+    padding: 20px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+    text-align: center;
 }
