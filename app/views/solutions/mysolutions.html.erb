@@ -9,9 +9,10 @@
   <br>
 	<pre class="solutions"><strong>PROBLEM:</strong><br><br><%= solution.question.content %>
   <br>
-  <strong><a href="/questions/<%= solution.question_id %>">SOLUTION:</a></strong><br><br><%= solution.content %></pre>
-  <button id="<%= solution.id %>" class="delete">DELETE</button>
+  <strong>SOLUTION:</strong><br><br><%= solution.content %></pre>
+  <button id="<%= solution.id %>" class="btn waves-effect waves-light delete">DELETE</button>
   <button class="btn waves-effect waves-light" data-target="#modal<%= solution.id %>" data-toggle="modal" >EDIT</button>
+  <a class="btn waves-effect waves-light" href="/questions/<%= solution.question_id %>">VIEW</a>
 
    <div id="modal<%= solution.id %>" class="modal">
  <div class="col-sm-8 col-md-10 col-lg-12">
