@@ -21,25 +21,22 @@
             <div class="row">
                 <div class="col s12 m12 l12">
                     <div class="card-panel">
-                        <span></span>
-                        <h3>
-                        <span><%@solutions.each do |solution|  %></span></h3>
-                        <h4><span>SOLUTION BY - <%= solution.user.name %>
-                        <a href="/solutions/%3C%=%20solution.id%20%%3E">
-                        <p><span><%= solution.content %></span></p></a></span>
-                        <%= link_to like_solution_path(solution), method: :put do %>
-                        <button class="btn waves-effect waves-light" id="up">UP
-                        <span>(<%= solution.get_upvotes.size  %>)</span></button>
-                        <%end  %>
-                        <%= link_to dislike_solution_path(solution), method: :put do %>
-                        <button class="btn waves-effect waves-light" id=
-                        "down">DOWN
-                        <span>(<%= solution.get_downvotes.size  %>)</span></button>
-                        <%end %> <a class="btn waves-effect waves-light" href=
-                        "/solutions/%3C%=%20solution.id%20%%3E" id=
-                        "down">COMMENTS
-                        <span>(<%= @comment_counts[solution.id] %>)</span></a>
-                        <%end %></h4>
+                        <span>      
+                       <h3><% @solutions.each do |solution|  %></h3>       
+                         <h4>SOLUTION BY - <%= solution.user.name %></h3>      
+                       <a href="/solutions/<%= solution.id %>"><p><%= solution.content %></p></a>      
+                     </span>     
+                         <%= link_to like_solution_path(solution), method: :put do %>      
+                         <button class="btn waves-effect waves-light" id="up">UP       
+                         <span >(<%= solution.get_upvotes.size  %>)</span></button>        
+                     <% end  %>        
+                     <%= link_to dislike_solution_path(solution), method: :put do %>       
+                         <button class="btn waves-effect waves-light" id="down">DOWN       
+                         <span >(<%= solution.get_downvotes.size  %>)</span></button>      
+                     <% end %>     
+                         <a class="btn waves-effect waves-light" id="down" href="/solutions/<%= solution.id %>">COMMENTS       
+                         <span >(<%= @comment_counts[solution.id] %>)</span></a>       
+                    <% end %>
                     </div>
                 </div>
             </div>

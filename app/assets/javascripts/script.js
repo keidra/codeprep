@@ -21,10 +21,10 @@
 //  });
 
 //LOGIN 
- $('#login').click(function() {
-            window.location.href = '/login';
-            return false;
-        });
+ // $('#login').click(function() {
+ //            window.location.href = '/login';
+ //            return false;
+ //        });
          // SKIP
         $('#skip').click(function() {
             window.location.href = '/questions/easy';
