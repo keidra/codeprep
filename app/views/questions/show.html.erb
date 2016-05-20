@@ -27,11 +27,11 @@
                        <a href="/solutions/<%= solution.id %>"><p><%= solution.content %></p></a>      
                      </span>     
                          <%= link_to like_solution_path(solution), method: :put do %>      
-                         <button class="btn waves-effect waves-light" id="up">UP       
+                         <button class="btn waves-effect waves-light" id="up">LIKE       
                          <span >(<%= solution.get_upvotes.size  %>)</span></button>        
                      <% end  %>        
                      <%= link_to dislike_solution_path(solution), method: :put do %>       
-                         <button class="btn waves-effect waves-light" id="down">DOWN       
+                         <button class="btn waves-effect waves-light" id="down">DISLIKE       
                          <span >(<%= solution.get_downvotes.size  %>)</span></button>      
                      <% end %>     
                          <a class="btn waves-effect waves-light" id="down" href="/solutions/<%= solution.id %>">COMMENTS       
