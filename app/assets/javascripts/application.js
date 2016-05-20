@@ -147,9 +147,9 @@ $(document).on('page:load', function() {
             msLeft = endTime - (+new Date);
             if ( msLeft < 1000 ) {
                 element.innerHTML = "countdown's over!";
-                $('.easy_box').prop('disabled',true);
-                $('.medium_box').prop('disabled',true);
-                $('.hard_box').prop('disabled',true);
+                $('.easy_box').prop('readonly',true);
+                $('.medium_box').prop('readonly',true);
+                $('.hard_box').prop('readonly',true);
             } else {
                 time = new Date( msLeft );
                 hours = time.getUTCHours();
