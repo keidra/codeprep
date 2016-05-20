@@ -20,11 +20,11 @@
 //     return false;
 //  });
 
-// //LOGIN 
-//         $('#login').click(function() {
-//     window.location.href = '/login';
-//     return false;
-//  });
+//LOGIN 
+        $('#login').click(function() {
+    window.location.href = '/login';
+    return false;
+ });
 
 // DELETE BUTTON FOR MY SAVED SOLUTIONS
 

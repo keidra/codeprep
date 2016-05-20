@@ -152,6 +152,7 @@ body > div.container-fluid > div > div > div > button:nth-child(3) {
     margin-right: 30px;
     width: 150px;
     height: 50px;
+
 }
 
 #new_user > input.btn.btn-default {
@@ -478,7 +479,7 @@ body > div.container-fluid > div > div > div:nth-child(3) > div > div > span > s
     margin: 0.5rem 0 1rem 0;
     border-radius: 2px;
     background-color: #fff;
-    text-align: left;
+    text-align: left !important;
 }
 
 
@@ -489,8 +490,8 @@ body > div.container-fluid > div > div > div > div > div > div > div > div > h1 
 }
 
 body > div.container-fluid > div > div > div > div > div > div > div > div > span {
-    font-size: 20px;
     text-align: center;
+    font-size: 1.2em;
 }
 
 
@@ -518,4 +519,81 @@ body > div.container-fluid > div > div > div:nth-child(3) > div > div > span > h
 
 body > div.container-fluid > div > div > div:nth-child(5) > div > div > span > h3 {
     font-size: 1.92rem;
+}
+
+
+#edit_solution_2 > input.btn.btn-primary {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #000; 
+}
+
+#modal2 > div > button {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #000; 
+}
+
+
+.btn-primary {
+    background-color: transparent !important;
+    color: black !important;
+    border: 1px solid #000 !important; 
+}
+
+.btn-default {
+    background-color: transparent !important;
+    color: black !important;
+    border: 1px solid #000 !important; 
+}
+
+.card-panel {
+    transition: box-shadow .25s;
+    padding: 20px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+    text-align: left !important;
+}
+
+strong {
+    font-size: 2em;
+}
+
+body > div > h3 {
+    font-family: monospace !important;
+}
+
+
+
+body > div.container-fluid > div > div > div.row > div > div > span > h4 {
+    font-size: 1.5em;
+}
+
+p {
+    margin-top: 25px;
+    margin-bottom: 27px;
+}
+
+
+body > nav > div > li {
+    list-style: none;
+    margin-left: 25px;
+   
+}
+
+
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    display: inline-flex !important;
+}
+
+body > nav > div > li:nth-child(2) {
+        margin-left: 900px;
+}
+
+body > nav > div > ul > li {
+        margin-left: 1127px;
+    margin-top: -30px;
 }

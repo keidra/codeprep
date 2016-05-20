@@ -10,7 +10,7 @@
 	<div class="row">
       <div class="col s12 m12 l12">
         <div class="card-panel">
-        <p><strong>PROBLEM:</strong><br><br><%= solution.question.content %></p>
+        <p><strong>PROBLEM:</strong><br><br><p class="text"><%= solution.question.content %></p></p>
 
         <br>
         
@@ -25,7 +25,7 @@
    <div id="modal<%= solution.id %>" class="modal">
  <div class="col-sm-8 col-md-10 col-lg-12">
       <%= bootstrap_form_for solution do |t| %>
-              <%= t.text_area :content %>
+              <%= t.text_area :content, :rows => 15 %>
               <%= t.primary %>
               <%= t.hidden_field :question_id %>
             <% end %>
