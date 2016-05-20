@@ -4,13 +4,25 @@
 <div class="row">
   <div class="col-xs-6 col-sm-10 col-lg-12">
     <h1 id="title">CODEPREP</h1><img src="http://i22.photobucket.com/albums/b315/Doifreakuout14/LOGO.png">
-<h3> Solution For: <%= @solution.question.title %></h3>
-<pre><%= @solution.content %></pre>
+
+<div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <span>
+          <h4>Solution - <%= @solution.question.title %></h4>
+          <%= @solution.content %>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-6 col-sm-4 col-lg-12">
        <%= bootstrap_form_for(@new_comment, {url: 'comments/create'}) do |t| %>
-              <%= t.text_area :content, :rows => 10, label: "Leave a comment here:" %>
+              <%= t.text_area :content, :rows => 8, label: "LEAVE A COMMENT HERE:" %>
               <%= t.primary %>
               <%= t.hidden_field :solution_id, :value => @solution.id%>
             <% end %>
@@ -19,19 +31,34 @@
 </div>
 
 
-
-<% @comments.each do |comment|  %>
-    <h3><%= comment.user.name %></h3>
+<div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <span>
+        <% @comments.each do |comment|  %>
+    <h3><i><%= comment.user.name %> says..</i></h3>
     <p><%= comment.content %></p>
         <%= link_to like_comment_path(comment), method: :put do %>
-            <button class="btn waves-effect waves-light" id="up">UP
+            <button class="btn waves-effect waves-light" id="up">LIKE!
             <span >(<%= comment.get_upvotes.size  %>)</span></button>
         <% end  %>
         <%= link_to dislike_comment_path(comment), method: :put do %>
-            <button class="btn waves-effect waves-light" id="down">DOWN
+            <button class="btn waves-effect waves-light" id="down">DISLIKE!
             <span >(<%= comment.get_downvotes.size  %>)</span></button>
         <% end %>
     <% end %>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
 </div>
 </div>
 </div>
