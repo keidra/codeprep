@@ -1,4 +1,15 @@
-CODEPREP | Project 3 | Josh Brian Keidra Hannah
+![Alt text](Screen1.png?raw=true "Screenshot 1")
+![Alt text](Screen2.png?raw=true "Screenshot 2")
+
+
+____________________________________
+
+              CODEPREP
+____________________________________ 
+
+
+
+Josh Brian Keidra Hannah
 HEROKU: https://code-prep.herokuapp.com/
 WIREFRAME: https://goo.gl/Q84wxi
 Technologies Used //

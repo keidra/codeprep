@@ -73,7 +73,7 @@ class SolutionsController < ApplicationController
 
   def upvote
     @solution.upvote_from current_user
-    redirect_to :back
+    redi 
   end
 
   def downvote
