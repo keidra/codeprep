@@ -4,26 +4,30 @@
 
 ____________________________________
 
-              CODEPREP
+CODEPREP
 ____________________________________ 
 
+Group Collaboration - Team Members: Josh Brian Keidra Hannah
 
 
-Josh Brian Keidra Hannah
+
 HEROKU: https://code-prep.herokuapp.com/
-WIREFRAME: https://goo.gl/Q84wxi
-Technologies Used //
 
-For this project, we utilized HTML, CSS, jQuery/AJAX, Ruby, Ruby on Rails, postgresql (database), Forman, bootstrap, ‘email_validator’ (gem), 'acts_as_votable' (gem), bcrypt,  'rails_12factor'( Gem for Heroku deployment) and Materialize.
+WIREFRAMES: https://goo.gl/Q84wxi
+
+
+TECHNOLOGIES USED:  HTML, CSS, jQuery, AJAX, Ruby, Ruby on Rails, pSQL, Forman, Bootstrap, ‘email_validator’ (gem), 'acts_as_votable' (gem), bcrypt,  'rails_12factor'( Gem for Heroku deployment) and Materialize.
+
+__________________________________________________________________________________
 
 Approach Taken //
 We began our project by first conceptualizing the user experience. From there we were able collectively draw our primitive wireframes which Keidra then implemented via Balsamic. From there we created the skeleton of the app; Josh created the necessary controllers and models. 
  
-After the basic functionality, we started working on the views pages where Keidra (our front-end specialist) set up the visuals for most pages as well as formatting. At the same time, Josh (our backend specialist) worked on the routes and controllers to make sure that all the methods were properly in place as well. Getting our MVP functionality of authentication (see unsolved problems below) as well as basic routes up took the majority of our time as well as seeding the database with users, solutions, and comments (Hannah). 
+After the basic functionality, we started working on the views pages where Keidra (our front-end developer) set up the visuals for most pages as well as formatting. At the same time, Josh (our backend developer) worked on the routes and controllers to make sure that all the methods were properly in place as well. Getting our MVP functionality of authentication (see unsolved problems below) as well as basic routes up took the majority of our time as well as seeding the database with users, solutions, and comments (Hannah). 
 
 Brian, who is a full-stack developer, largely worked on the Countdown plugin as well as the ratings gem for comments which required a lot of documentation review and polymorphic understanding. This as well as other functionalities (skip buttons, content becoming non-editable after the countdown reaches 0, users unable to access questions or solutions without logging in) became the action items the group focused on post deployment to Heroku on Wednesday afternoon. 
 
-Installation Instructions //
+USER Instructions //
 1. Login 
 2. Click the difficulty level (easy, medium, hard) for your first whiteboard question
 3. In the form, type your solution to the problem before the timer runs out
